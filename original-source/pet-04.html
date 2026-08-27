@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companion Adoption Dossier | FurEver Care</title>
+  <meta name="description" content="View detailed personality profile, medical clearance, and background story for our sanctuary adoptable companions.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media-fixes.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="utility-bar" aria-label="Live Sanctuary Telemetry">
+    <div class="container">
+      <div class="utility-group">
+        <div class="utility-item">
+          <span class="utility-dot"></span>
+          <span>LOCAL TIME: <strong id="live-clock">10:42 AM</strong></span>
+          <span style="opacity: 0.5; margin: 0 0.3rem;">|</span>
+          <span id="live-date">Mon, Aug 24</span>
+        </div>
+        <div class="utility-item" id="user-location">
+          <span class="utility-dot"></span>
+          <span>LOCATION: Detecting Regional Hub...</span>
+        </div>
+      </div>
+      <div class="utility-group">
+        <div class="utility-item">
+          <span>ATELIER VISITORS: <strong id="visitor-count">1,432</strong></span>
+        </div>
+        <div class="utility-user-greeting">
+          Welcome to FurEver Care
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Burgundy Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+<span class="brand-name">FurEver Care</span>
+          <span class="brand-tagline">They Deserve Forever Love</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="pet-care.html" class="nav-link">Pet Care</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="veterinarian.html" class="nav-link">Veterinarians</a></li>
+          <li><a href="adoption.html" class="nav-link active">Adoption</a></li>
+          <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="adoption.html" class="btn btn-dusty btn-sm">All Adoptable Pets</a>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="adoption.html" class="mobile-nav-link active">Adoptable Companions</a></li>
+      <li><a href="success-stories.html" class="mobile-nav-link">Success Stories</a></li>
+      <li><a href="shelter.html" class="mobile-nav-link">Shelter Hub</a></li>
+      <li><a href="pet-care.html" class="mobile-nav-link">Pet Care Hub</a></li>
+      <li><a href="emergency.html" class="mobile-nav-link">Emergency Hub</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="section section-hero">
+      <div class="container">
+        
+        <div style="margin-bottom: 2rem;">
+          <a href="adoption.html" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy); display: inline-flex; align-items: center; gap: 0.4rem;">
+            &larr; Back to Adoption Center
+          </a>
+        </div>
+
+        <div id="pet-dossier-container" class="reveal-on-scroll">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Adoption Inquiry Modal Dialog -->
+  <div id="adoption-modal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeModal('adoption-modal')" aria-label="Close modal">&times;</button>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <span class="label-editorial" style="color: var(--burgundy-light);">Adoption Request</span>
+        <h2 style="font-size: 1.85rem; margin-top: 0.25rem;">Start Inquiry for <span id="adoption-modal-pet-name">Companion</span></h2>
+        <p style="font-size: 0.88rem; opacity: 0.85;">Our sanctuary matching team reviews every inquiry carefully to ensure harmonious domestic compatibility.</p>
+      </div>
+
+      <form id="adoption-inquiry-form">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+          <div class="form-group">
+            <label for="adopt-applicant-name" class="form-label">Guardian Name *</label>
+            <input type="text" id="adopt-applicant-name" class="form-control" placeholder="e.g. Arthur Vance" required>
+          </div>
+          <div class="form-group">
+            <label for="adopt-applicant-email" class="form-label">Email *</label>
+            <input type="email" id="adopt-applicant-email" class="form-control" placeholder="e.g. arthur@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="adopt-applicant-phone" class="form-label">Telephone</label>
+            <input type="tel" id="adopt-applicant-phone" class="form-control" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label for="adopt-home-type" class="form-label">Dwelling Type</label>
+            <select id="adopt-home-type" class="form-control">
+              <option value="House with Fenced Garden">House with Fenced Garden</option>
+              <option value="Spacious Apartment / Flat">Spacious Apartment / Flat</option>
+              <option value="Country Estate / Acreage">Country Estate / Acreage</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.75rem;">
+          <label for="adopt-notes" class="form-label">Tell Us About Your Household & Daily Routine</label>
+          <textarea id="adopt-notes" class="form-control" rows="3" placeholder="Other pets, work hours, outdoor access..."></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <span style="font-size: 0.78rem; opacity: 0.75;">Zero application fees. Complimentary transition support.</span>
+          <button type="submit" class="btn btn-burgundy">Submit Adoption Request &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Luxury Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-name">FurEver Care</div>
+          <div class="footer-tagline">“They Deserve Forever Love”</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Adoption</h4>
+          <ul class="footer-links">
+            <li><a href="adoption.html" class="footer-link">Adoptable Pets</a></li>
+            <li><a href="success-stories.html" class="footer-link">Success Stories</a></li>
+            <li><a href="shelter.html" class="footer-link">Sanctuary Mission</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Care Disciplines</h4>
+          <ul class="footer-links">
+            <li><a href="pet-owner.html" class="footer-link">Pet Owner Journal</a></li>
+            <li><a href="feeding-guide.html" class="footer-link">Feeding Guide</a></li>
+            <li><a href="veterinarian.html" class="footer-link">Veterinary Center</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency</h4>
+          <p style="font-size: 0.88rem; opacity: 0.85; margin-bottom: 1rem;">24/7 Helpline: +1 (800) 555-8380</p>
+          <a href="emergency.html" class="btn btn-dusty btn-sm">Emergency Hub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 FurEver Care. All rights reserved.</div>
+        <a href="contact.html" class="footer-link">Contact Center</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/utilities.js"></script>
+  <script>
+    const PETS_DATA = [
+  {
+    "id": "pet-01",
+    "name": "Bella Morgan",
+    "species": "Dogs",
+    "breed": "Italian Greyhound",
+    "age": "2 Years",
+    "gender": "Female (Spayed)",
+    "size": "Small (6 kg)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Gentle Soul",
+    "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80",
+    "summary": "An aristocratic yet affectionate companion who adores cashmere blankets, peaceful afternoon sunbaths, and quiet company.",
+    "personality": [
+      "Gentle & Polite",
+      "Cuddle Enthusiast",
+      "Leash Trained",
+      "Quiet & Serene",
+      "Harmonious with Cats"
+    ],
+    "health": "Fully vaccinated, microchipped, spayed, dental cleaning completed May 2026.",
+    "story": "Rescued during a private estate transition, Bella has flourished under gentle foster care. She enjoys rhythmic morning walks followed by hours of contented slumber in sunny corners. She seeks a peaceful domestic environment where gentle affection is cherished."
+  },
+  {
+    "id": "pet-02",
+    "name": "Charlie Brooks",
+    "species": "Dogs",
+    "breed": "Golden Retriever & Setter Mix",
+    "age": "3 Years",
+    "gender": "Male (Neutered)",
+    "size": "Large (28 kg)",
+    "location": "FurEver Care Pet Center",
+    "status": "Available",
+    "badge": "Active Explorer",
+    "image": "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=80",
+    "summary": "Joyful, devoted, and exceptionally intelligent. Charlie is eager to learn, loves hiking trails, and greets everyone with a wagging tail.",
+    "personality": [
+      "Enthusiastic",
+      "Family Friendly",
+      "Swimmer",
+      "Quick Learner",
+      "Devoted Companion"
+    ],
+    "health": "Vaccinated up to date, neutered, hip evaluation clear, heartworm negative.",
+    "story": "Charlie was surrendered when his prior family relocated overseas. He brings boundless loyalty and gentle playfulness into any warm household with space for outdoor adventures."
+  },
+  {
+    "id": "pet-03",
+    "name": "Oliver \"Ollie\" Carter",
+    "species": "Cats",
+    "breed": "British Shorthair (Lilac)",
+    "age": "1.5 Years",
+    "gender": "Male (Neutered)",
+    "size": "Medium (4.5 kg)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Quiet Aristocrat",
+    "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80",
+    "summary": "A plush velvet philosopher who observes life with quiet majesty, enjoys wand play, and curls up at the foot of the bed.",
+    "personality": [
+      "Independent",
+      "Playful Observer",
+      "Litter Perfect",
+      "Low Vocalization"
+    ],
+    "health": "Microchipped, neutered, FVRCP & FeLV negative, vaccinated.",
+    "story": "Ollie arrived as a timid rescue and has blossomed into a steady, dignified companion who appreciates gentle affection and elevated window perches."
+  },
+  {
+    "id": "pet-04",
+    "name": "Daisy & Lily",
+    "species": "Cats",
+    "breed": "Ragdoll & Chantilly Sisters",
+    "age": "1 Year",
+    "gender": "Female (Bonded Pair)",
+    "size": "Medium Pair (4 kg each)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Bonded Pair",
+    "image": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80",
+    "summary": "Two inseparable sisters with striking sapphire eyes and silk coats. They groom each other constantly and purr in harmonic unison.",
+    "personality": [
+      "Ultra Affectionate",
+      "Playful Duo",
+      "Lap Seekers",
+      "Gentle"
+    ],
+    "health": "Both spayed, fully vaccinated, microchipped, dewormed.",
+    "story": "Found together in a garden estate, Daisy and Lily are bonded for life and seek a serene home that will cherish double the purrs and affection."
+  },
+  {
+    "id": "pet-05",
+    "name": "Max Bennett",
+    "species": "Rabbits",
+    "breed": "Holland Lop",
+    "age": "10 Months",
+    "gender": "Male (Neutered)",
+    "size": "Small (1.8 kg)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Free-Roam Ready",
+    "image": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=800&q=80",
+    "summary": "A curious, velvety Holland Lop who performs delightful joy binkies and enjoys organic dandelion leaves and willow chew toys.",
+    "personality": [
+      "Litter Box Trained",
+      "Curious",
+      "Gentle",
+      "Prefers Quiet"
+    ],
+    "health": "Neutered, RHDV2 vaccinated, baseline dental exam pristine.",
+    "story": "Max is a calm, curious companion who enjoys supervised free-roam time, willow toys, and peaceful household routines."
+  },
+  {
+    "id": "pet-06",
+    "name": "Rosie Parker",
+    "species": "Dogs",
+    "breed": "Miniature Dachshund",
+    "age": "4 Years",
+    "gender": "Female (Spayed)",
+    "size": "Small (5 kg)",
+    "location": "FurEver Care Pet Center",
+    "status": "Available",
+    "badge": "Heart Warmer",
+    "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80",
+    "summary": "A spirited, warm-hearted little lady with a penchant for soft burrowing blankets and companionable strolls in the park.",
+    "personality": [
+      "Sweet Natured",
+      "Affectionate",
+      "Playful",
+      "People Oriented"
+    ],
+    "health": "Spayed, all core vaccines current, spine health certified by orthopedic vet.",
+    "story": "Rosie Parker is a warm, affectionate companion who thrives on gentle interaction and relaxed family routines."
+  },
+  {
+    "id": "pet-07",
+    "name": "Cooper James",
+    "species": "Rabbits",
+    "breed": "Lionhead Heritage",
+    "age": "1 Year",
+    "gender": "Male (Neutered)",
+    "size": "Small (1.6 kg)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Silken Mane",
+    "image": "https://images.unsplash.com/photo-1535241749838-299277b6305f?auto=format&fit=crop&w=800&q=80",
+    "summary": "Distinguished Lionhead rabbit with a cloud-like mane who loves gentle head strokes, fresh timothy hay, and stacking cups.",
+    "personality": [
+      "Curious",
+      "Gentle",
+      "Confident",
+      "Playful"
+    ],
+    "health": "Neutered, vaccinated, regular grooming care routine established.",
+    "story": "Cooper James is an easygoing companion with a curious nature and a fondness for enrichment games and quiet cuddles."
+  },
+  {
+    "id": "pet-08",
+    "name": "Luna Grace",
+    "species": "Cats",
+    "breed": "Russian Blue Mix",
+    "age": "2.5 Years",
+    "gender": "Female (Spayed)",
+    "size": "Medium (3.8 kg)",
+    "location": "FurEver Care Pet Center",
+    "status": "Available",
+    "badge": "Emerald Eyes",
+    "image": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=800&q=80",
+    "summary": "Silvery coat with captivating green eyes. Luna Grace is a calm soul who enjoys sunbeams, bird watching, and gentle chin scratches.",
+    "personality": [
+      "Calm",
+      "Observant",
+      "Independent",
+      "Sweet Natured"
+    ],
+    "health": "Microchipped, spayed, vaccinated, FeLV/FIV negative.",
+    "story": "Luna Grace is a calm soul who enjoys sunbeams, bird watching, and gentle chin scratches in a peaceful home."
+  }
+];
+
+    function openAdoptionModalDirect(name) {
+      const modal = document.getElementById('adoption-modal');
+      const petNameTarget = document.getElementById('adoption-modal-pet-name');
+      if (petNameTarget) petNameTarget.textContent = name;
+      if (typeof openModal === 'function') openModal('adoption-modal');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const petId = 'pet-04';
+      const pet = PETS_DATA.find(p => p.id === petId) || PETS_DATA[0];
+
+      const container = document.getElementById('pet-dossier-container');
+      if (container && pet) {
+        const traitsHtml = pet.personality.map(t => 
+          `<span style="background: rgba(74, 21, 33, 0.08); padding: 0.35rem 0.85rem; border-radius: var(--radius-pill); font-size: 0.82rem; font-weight: 600;">✦ ${t}</span>`
+        ).join(' ');
+
+        container.innerHTML = `
+          <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start;">
+            <div>
+              <div class="hero-image-frame" style="border-radius: var(--radius-md);">
+                <img src="${pet.image}" alt="${pet.name}" style="height: 480px; width:100%; object-fit:contain; object-position:center;" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1000&q=85';">
+              </div>
+              <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 1.5rem;">
+                <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy-light); margin-bottom: 0.4rem;">Location</div>
+                <div style="font-size: 1.1rem; font-weight: 600; color: var(--burgundy-deep);">${pet.location}</div>
+                <div style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.25rem;">Visits available Wed–Sun by private appointment.</div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.6rem;">
+                <span class="card-badge card-badge-dusty" style="position: static; display: inline-block;">${pet.badge}</span>
+                <span class="label-editorial" style="color: var(--burgundy-light);">${pet.species} • ${pet.breed}</span>
+              </div>
+              <h1 style="font-size: clamp(2.4rem, 4.5vw, 3.4rem); margin-bottom: 0.5rem; line-height: 1.1;">${pet.name}</h1>
+              <div style="font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; color: var(--burgundy-light); margin-bottom: 1.5rem;">
+                ${pet.age} • ${pet.gender} • ${pet.size}
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+                ${traitsHtml}
+              </div>
+
+              <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.75rem; margin-bottom: 1.75rem;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Adoption Story & Background</h3>
+                <p style="font-size: 0.95rem; line-height: 1.65;">${pet.story}</p>
+              </div>
+
+              <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.75rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Clinical Health Clearance</h3>
+                <p style="font-size: 0.9rem; opacity: 0.9;">${pet.health}</p>
+              </div>
+
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn btn-burgundy btn-lg" style="flex: 1;" onclick="openAdoptionModalDirect('${pet.name}')">Start Adoption Request</button>
+                <a href="adoption.html" class="btn btn-outline-burgundy btn-lg">Browse Adoptions</a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Handle Adoption Form Submission
+      const form = document.getElementById('adoption-inquiry-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (typeof showToast === 'function') {
+            showToast(`Adoption inquiry submitted for ${pet.name}! Our sanctuary team will review your application.`);
+          }
+          if (typeof closeModal === 'function') closeModal('adoption-modal');
+        });
+      }
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site-enhancements.js"></script>
+</body>
+</html>

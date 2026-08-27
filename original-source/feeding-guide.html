@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bespoke Feeding Guide & Nutrition | FurEver Care</title>
+  <meta name="description" content="Discover tailored macronutrient guidelines, meal frequencies, hydration requirements, and interactive portion calculators for puppies, dogs, kittens, and cats.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media-fixes.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="utility-bar" aria-label="Live Sanctuary Telemetry">
+    <div class="container">
+      <div class="utility-group">
+        <div class="utility-item">
+          <span class="utility-dot"></span>
+          <span>LOCAL TIME: <strong id="live-clock">10:42 AM</strong></span>
+          <span style="opacity: 0.5; margin: 0 0.3rem;">|</span>
+          <span id="live-date">Mon, Aug 24</span>
+        </div>
+        <div class="utility-item" id="user-location">
+          <span class="utility-dot"></span>
+          <span>LOCATION: Detecting Regional Hub...</span>
+        </div>
+      </div>
+      <div class="utility-group">
+        <div class="utility-item">
+          <span>ATELIER VISITORS: <strong id="visitor-count">1,432</strong></span>
+        </div>
+        <div class="utility-user-greeting">
+          Welcome to FurEver Care
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Burgundy Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+<span class="brand-name">FurEver Care</span>
+          <span class="brand-tagline">They Deserve Forever Love</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="pet-care.html" class="nav-link active">Pet Care</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="veterinarian.html" class="nav-link">Veterinarians</a></li>
+          <li><a href="adoption.html" class="nav-link">Adoption</a></li>
+          <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="pet-owner.html" class="btn btn-dusty btn-sm">Start Your Pet Journey</a>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="pet-care.html" class="mobile-nav-link">Pet Care Hub</a></li>
+      <li><a href="feeding-guide.html" class="mobile-nav-link active">Feeding Guide</a></li>
+      <li><a href="grooming.html" class="mobile-nav-link">Grooming Studio</a></li>
+      <li><a href="health-tips.html" class="mobile-nav-link">Health & Longevity</a></li>
+      <li><a href="training.html" class="mobile-nav-link">Mind & Training</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Pet Products</a></li>
+      <li><a href="veterinarian.html" class="mobile-nav-link">Veterinary Center</a></li>
+      <li><a href="adoption.html" class="mobile-nav-link">Adoption Center</a></li>
+      <li><a href="emergency.html" class="mobile-nav-link">Emergency Hub</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Header Hero -->
+    <section class="section section-hero">
+      <div class="container">
+        <div style="max-width: 780px; margin: 0 auto; text-align: center;" class="reveal-on-scroll">
+          <span class="label-editorial" style="color: var(--burgundy-light); margin-bottom: 0.75rem;">Nutritional Alchemy</span>
+          <h1 style="margin-bottom: 1rem;">Bespoke Feeding Guide</h1>
+          <p class="text-lead">
+            Select your companion's specific species and life stage to reveal clinical macronutrient requirements, portion tables, and hydration wisdom.
+          </p>
+        </div>
+
+        <!-- Life Stage Interactive Tabs -->
+        <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 3rem;" class="reveal-on-scroll">
+          <button class="filter-pill active" data-stage="puppy" onclick="selectLifeStage('puppy')">Puppy (2 - 12 Mo)</button>
+          <button class="filter-pill" data-stage="adult-dog" onclick="selectLifeStage('adult-dog')">Adult Dog (1 - 7 Yrs)</button>
+          <button class="filter-pill" data-stage="kitten" onclick="selectLifeStage('kitten')">Kitten (2 - 12 Mo)</button>
+          <button class="filter-pill" data-stage="adult-cat" onclick="selectLifeStage('adult-cat')">Adult Cat (1 - 10 Yrs)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Stage Content Area -->
+    <section class="section section-bordered-top" style="background: var(--dusty-pink-light);">
+      <div class="container">
+        
+        <div id="stage-content-container" class="reveal-on-scroll">
+          <!-- Dynamic Content rendered via JS below -->
+        </div>
+
+        <!-- Interactive Custom Portion Calculator (HTML/CSS/JS) -->
+        <div style="background: var(--dusty-pink); border: 2px solid var(--burgundy); border-radius: var(--radius-lg); padding: 3rem; margin-top: 4rem; box-shadow: var(--shadow-editorial);" class="reveal-on-scroll">
+          <div style="max-width: 650px; margin: 0 auto; text-align: center; margin-bottom: 2rem;">
+            <span class="label-editorial" style="color: var(--burgundy-light);">Precision Telemetry</span>
+            <h2 style="font-size: 2.2rem; margin-top: 0.35rem;">Daily Portion & Calorie Estimator</h2>
+            <p style="font-size: 0.95rem; opacity: 0.85; margin-top: 0.5rem;">
+              Calculate the estimated daily food intake based on body weight and activity index.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 1.25rem; align-items: end; max-width: 950px; margin: 0 auto;">
+            <div class="form-group">
+              <label for="calc-weight" class="form-label">Body Weight (kg)</label>
+              <input type="number" id="calc-weight" class="form-control" placeholder="e.g. 8" min="0.5" max="80" step="0.5" value="10">
+            </div>
+
+            <div class="form-group">
+              <label for="calc-stage" class="form-label">Life Stage</label>
+              <select id="calc-stage" class="form-control">
+                <option value="puppy">Puppy</option>
+                <option value="adult-dog" selected>Adult Dog</option>
+                <option value="kitten">Kitten</option>
+                <option value="adult-cat">Adult Cat</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="calc-activity" class="form-label">Activity Level</label>
+              <select id="calc-activity" class="form-control">
+                <option value="low">Sedentary / Gentle</option>
+                <option value="moderate" selected>Moderate Active</option>
+                <option value="high">High Performance</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" style="opacity: 0;">Calculate</label>
+              <button class="btn btn-burgundy" onclick="calculatePortion()">Calculate</button>
+            </div>
+          </div>
+
+          <div id="calculator-result" style="margin-top: 2rem; background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.75rem; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; display: block;">
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--burgundy-light);">Estimated Daily Serving</div>
+            <div id="calc-grams-output" style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--burgundy-deep); margin: 0.35rem 0;">180 - 220 Grams / Day</div>
+            <div id="calc-note-output" style="font-size: 0.88rem; opacity: 0.85;">Split into 2 structured meals daily with fresh filtered water available.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-name">FurEver Care</div>
+          <div class="footer-tagline">“They Deserve Forever Love”</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Pet Care</h4>
+          <ul class="footer-links">
+            <li><a href="feeding-guide.html" class="footer-link">Feeding Guide</a></li>
+            <li><a href="grooming.html" class="footer-link">Grooming</a></li>
+            <li><a href="health-tips.html" class="footer-link">Health Tips</a></li>
+            <li><a href="training.html" class="footer-link">Training</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Sanctuary</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">Pet Products</a></li>
+            <li><a href="veterinarian.html" class="footer-link">Veterinary Center</a></li>
+            <li><a href="adoption.html" class="footer-link">Adoption</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency</h4>
+          <p style="font-size: 0.88rem; opacity: 0.85; margin-bottom: 1rem;">24/7 Helpline: +1 (800) 555-8380</p>
+          <a href="emergency.html" class="btn btn-dusty btn-sm">Emergency Hub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 FurEver Care. All rights reserved.</div>
+        <a href="contact.html" class="footer-link">Contact Center</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/utilities.js"></script>
+  <script>
+    const STAGES_DATA = {
+      "puppy": {
+        name: "Puppy Development (2 - 12 Months)",
+        summary: "Rapid developmental growth phase requiring high biological protein, bioavailable calcium-phosphorus ratio, and DHA omega-3s for brain and vision maturation.",
+        frequency: "3 to 4 meals per day",
+        caloricDensity: "380 - 440 kcal / cup",
+        hydration: "60 - 100 ml per kg of body weight daily",
+        protein: "28% - 32%",
+        fat: "18% - 22%",
+        fiber: "3% - 5%",
+        moisture: "10% - 75%",
+        portionTable: [
+          { weight: "2 - 5 kg", cups: "0.75 - 1.25 cups", grams: "90 - 150g" },
+          { weight: "5 - 10 kg", cups: "1.5 - 2.25 cups", grams: "180 - 270g" },
+          { weight: "10 - 20 kg", cups: "2.5 - 3.75 cups", grams: "300 - 450g" },
+          { weight: "20+ kg", cups: "4.0 - 5.5+ cups", grams: "480 - 660g+" }
+        ],
+        tips: [
+          "Soak dry kibble in warm bone broth during teething months to soothe inflamed gums.",
+          "Maintain scheduled mealtimes and remove untouched food after 20 minutes to foster healthy digestive biorhythms.",
+          "Never introduce cooked bones, alliums (garlic/onions), or xylitol artificial sweeteners."
+        ]
+      },
+      "adult-dog": {
+        name: "Adult Canine Vitality (1 - 7 Years)",
+        summary: "Maintenance of lean muscle mass, joint cartilage elasticity, and sustained cellular energy with balanced whole-food proteins and botanical fiber.",
+        frequency: "2 structured meals per day",
+        caloricDensity: "340 - 390 kcal / cup",
+        hydration: "50 - 60 ml per kg body weight daily",
+        protein: "24% - 28%",
+        fat: "14% - 18%",
+        fiber: "4% - 6%",
+        moisture: "10% - 70%",
+        portionTable: [
+          { weight: "3 - 7 kg", cups: "0.5 - 1.0 cup", grams: "70 - 130g" },
+          { weight: "7 - 15 kg", cups: "1.25 - 2.0 cups", grams: "150 - 240g" },
+          { weight: "15 - 30 kg", cups: "2.25 - 3.5 cups", grams: "270 - 420g" },
+          { weight: "30+ kg", cups: "3.75 - 5.0+ cups", grams: "450 - 600g+" }
+        ],
+        tips: [
+          "Rotate novel single-source proteins quarterly (Venison, Duck, Wild Salmon) to prevent food intolerances.",
+          "Incorporate steamed pumpkin puree or fermented kefir for prebiotic microbiome resilience.",
+          "Calibrate calories downward by 10% during less active seasonal periods."
+        ]
+      },
+      "kitten": {
+        name: "Kitten Maturation (2 - 12 Months)",
+        summary: "Obligate carnivores in accelerated growth requiring dense animal-derived taurine, arginine, arachidonic acid, and high moisture to safeguard urinary tract health.",
+        frequency: "4 to 5 small meals daily (or free-choice premium wet food)",
+        caloricDensity: "420 - 480 kcal / cup or can",
+        hydration: "70 - 80 ml per kg body weight daily (primarily via moisture-rich food)",
+        protein: "34% - 40%",
+        fat: "20% - 24%",
+        fiber: "2% - 3%",
+        moisture: "75% - 82%",
+        portionTable: [
+          { weight: "0.5 - 1.2 kg", cups: "1.0 - 1.5 small cans (85g each)", grams: "85 - 130g" },
+          { weight: "1.2 - 2.5 kg", cups: "2.0 - 2.5 small cans", grams: "170 - 210g" },
+          { weight: "2.5 - 4.0 kg", cups: "2.5 - 3.0 small cans", grams: "210 - 260g" }
+        ],
+        tips: [
+          "Prioritize moisture-rich pâté over dry kibble to prevent chronic subclinical dehydration.",
+          "Introduce ceramic circulating water fountains early to satisfy natural instinct for flowing water.",
+          "Always verify that essential amino acid Taurine is guaranteed on dietary labels."
+        ]
+      },
+      "adult-cat": {
+        name: "Adult Feline Longevity (1 - 10 Years)",
+        summary: "Strict carnivorous metabolic profile requiring pure animal proteins, controlled magnesium and phosphorus ratios, and hydration support for kidney preservation.",
+        frequency: "2 to 3 measured meals per day",
+        caloricDensity: "320 - 370 kcal / cup or 140 - 180 kcal / can",
+        hydration: "50 - 60 ml per kg body weight daily",
+        protein: "32% - 38%",
+        fat: "15% - 20%",
+        fiber: "2% - 4%",
+        moisture: "70% - 80%",
+        portionTable: [
+          { weight: "2.5 - 3.5 kg", cups: "1.5 - 2.0 cans (85g)", grams: "130 - 170g" },
+          { weight: "3.5 - 5.0 kg", cups: "2.0 - 2.5 cans (85g)", grams: "170 - 215g" },
+          { weight: "5.0 - 7.0 kg", cups: "2.5 - 3.25 cans (85g)", grams: "215 - 280g" }
+        ],
+        tips: [
+          "Elevate food bowls by 10-15cm to align feline esophagus posture and curb regurgitation.",
+          "Position water bowls in a separate room from food to respect instinctual feline cleanliness habits.",
+          "Avoid high carbohydrate fillers (corn, wheat, soy) to maintain ideal lean body condition."
+        ]
+      }
+    };
+
+    function selectLifeStage(stageKey) {
+      const pills = document.querySelectorAll('.filter-pill[data-stage]');
+      pills.forEach(p => {
+        if (p.getAttribute('data-stage') === stageKey) p.classList.add('active');
+        else p.classList.remove('active');
+      });
+
+      const data = STAGES_DATA[stageKey];
+      const container = document.getElementById('stage-content-container');
+      if (!container || !data) return;
+
+      const portionRows = data.portionTable.map(row => `
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0.85rem 1rem; border-bottom: 1px solid var(--burgundy-tint-20); font-size: 0.9rem;">
+          <span style="font-weight: 600;">${row.weight}</span>
+          <span style="color: var(--burgundy-light);">${row.cups}</span>
+          <span style="font-weight: 600; text-align: right;">${row.grams}</span>
+        </div>
+      `).join('');
+
+      const tipsList = data.tips.map(tip => `
+        <li style="margin-bottom: 0.75rem; font-size: 0.92rem; display: flex; gap: 0.5rem;">
+          <span style="color: var(--burgundy); font-weight: 700;">✦</span>
+          <span>${tip}</span>
+        </li>
+      `).join('');
+
+      container.innerHTML = `
+        <div class="grid-2" style="gap: 3rem; align-items: start;">
+          <div>
+            <span class="label-editorial" style="color: var(--burgundy-light);">Target Nutrition Protocol</span>
+            <h2 style="font-size: 2.2rem; margin: 0.35rem 0 1rem;">${data.name}</h2>
+            <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">${data.summary}</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
+              <div style="background: var(--dusty-pink); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--burgundy-tint-20);">
+                <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy-light);">Feeding Frequency</div>
+                <div style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; margin-top: 0.25rem;">${data.frequency}</div>
+              </div>
+              <div style="background: var(--dusty-pink); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--burgundy-tint-20);">
+                <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy-light);">Daily Hydration</div>
+                <div style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; margin-top: 0.25rem;">${data.hydration}</div>
+              </div>
+            </div>
+
+            <!-- Visual Macronutrient Indicator Bar -->
+            <div style="background: var(--dusty-pink); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.5rem;">
+              <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1rem;">Target Macronutrient Profile</div>
+              <div style="display: flex; height: 16px; border-radius: var(--radius-pill); overflow: hidden; margin-bottom: 0.75rem; border: 1px solid var(--burgundy);">
+                <div style="width: 32%; background-color: var(--burgundy-deep);" title="Protein"></div>
+                <div style="width: 20%; background-color: var(--burgundy-light);" title="Fat"></div>
+                <div style="width: 8%; background-color: var(--burgundy-accent);" title="Fiber"></div>
+                <div style="width: 40%; background-color: var(--dusty-pink-muted);" title="Moisture"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; opacity: 0.85;">
+                <span>Protein: ${data.protein}</span>
+                <span>Fat: ${data.fat}</span>
+                <span>Fiber: ${data.fiber}</span>
+                <span>Moisture: ${data.moisture}</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="background: var(--dusty-pink); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 2rem;">
+              <div style="background: var(--burgundy); color: var(--dusty-pink-light); padding: 1rem 1.25rem; font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600;">
+                Portion Guidance Table
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0.75rem 1rem; background: rgba(74, 21, 33, 0.05); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px solid var(--burgundy-tint-20);">
+                <span>Weight</span>
+                <span>Serving (Cups)</span>
+                <span style="text-align: right;">Grams / Day</span>
+              </div>
+              ${portionRows}
+            </div>
+
+            <div style="background: var(--dusty-pink); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.5rem;">
+              <h4 style="margin-bottom: 1rem; font-size: 1.15rem;">Sanctuary Nutritional Notes</h4>
+              <ul>
+                ${tipsList}
+              </ul>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function calculatePortion() {
+      const weight = parseFloat(document.getElementById('calc-weight')?.value) || 10;
+      const stage = document.getElementById('calc-stage')?.value || 'adult-dog';
+      const activity = document.getElementById('calc-activity')?.value || 'moderate';
+
+      let factor = 20;
+      if (stage === 'puppy') factor = 28;
+      else if (stage === 'kitten') factor = 35;
+      else if (stage === 'adult-cat') factor = 25;
+      else factor = 18;
+
+      if (activity === 'high') factor *= 1.2;
+      if (activity === 'low') factor *= 0.85;
+
+      const totalGrams = Math.round(weight * factor);
+      const minGrams = Math.round(totalGrams * 0.9);
+      const maxGrams = Math.round(totalGrams * 1.1);
+
+      const output = document.getElementById('calc-grams-output');
+      const noteOutput = document.getElementById('calc-note-output');
+
+      if (output) output.textContent = `${minGrams} - ${maxGrams} Grams / Day`;
+      if (noteOutput) noteOutput.textContent = `Calibrated for a ${weight}kg ${stage.replace('-', ' ')} with ${activity} activity index.`;
+
+      if (typeof showToast === 'function') {
+        showToast(`Calculated: ${minGrams}-${maxGrams}g daily nutritional portion.`);
+      }
+    }
+
+    // Initialize with puppy on load
+    document.addEventListener('DOMContentLoaded', () => {
+      selectLifeStage('puppy');
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site-enhancements.js"></script>
+</body>
+</html>

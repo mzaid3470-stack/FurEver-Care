@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterinarian Specialist Profile | FurEver Care</title>
+  <meta name="description" content="Explore specialist credentials, clinical research, clinic hours, and appointment availability for FurEver Care veterinary physicians.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media-fixes.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="utility-bar" aria-label="Live Sanctuary Telemetry">
+    <div class="container">
+      <div class="utility-group">
+        <div class="utility-item">
+          <span class="utility-dot"></span>
+          <span>LOCAL TIME: <strong id="live-clock">10:42 AM</strong></span>
+          <span style="opacity: 0.5; margin: 0 0.3rem;">|</span>
+          <span id="live-date">Mon, Aug 24</span>
+        </div>
+        <div class="utility-item" id="user-location">
+          <span class="utility-dot"></span>
+          <span>LOCATION: Detecting Regional Hub...</span>
+        </div>
+      </div>
+      <div class="utility-group">
+        <div class="utility-item">
+          <span>ATELIER VISITORS: <strong id="visitor-count">1,432</strong></span>
+        </div>
+        <div class="utility-user-greeting">
+          Welcome to FurEver Care
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Burgundy Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+<span class="brand-name">FurEver Care</span>
+          <span class="brand-tagline">They Deserve Forever Love</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="pet-care.html" class="nav-link">Pet Care</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="veterinarian.html" class="nav-link active">Veterinarians</a></li>
+          <li><a href="adoption.html" class="nav-link">Adoption</a></li>
+          <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="appointments.html" class="btn btn-dusty btn-sm">Book Consultation</a>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="veterinarian.html" class="mobile-nav-link active">Veterinary Center</a></li>
+      <li><a href="appointments.html" class="mobile-nav-link">Consultation Booking</a></li>
+      <li><a href="medical-history.html" class="mobile-nav-link">Medical Case Studies</a></li>
+      <li><a href="pet-care.html" class="mobile-nav-link">Pet Care Hub</a></li>
+      <li><a href="emergency.html" class="mobile-nav-link">Emergency Hub</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="section section-hero">
+      <div class="container">
+        
+        <div style="margin-bottom: 2rem;">
+          <a href="veterinarian.html" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy); display: inline-flex; align-items: center; gap: 0.4rem;">
+            &larr; Back to Veterinary Specialists
+          </a>
+        </div>
+
+        <div id="vet-profile-container" class="reveal-on-scroll">
+          <!-- Dynamic Vet profile loaded below -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-name">FurEver Care</div>
+          <div class="footer-tagline">“They Deserve Forever Love”</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Veterinary</h4>
+          <ul class="footer-links">
+            <li><a href="veterinarian.html" class="footer-link">Specialists</a></li>
+            <li><a href="appointments.html" class="footer-link">Book Appointment</a></li>
+            <li><a href="medical-history.html" class="footer-link">Medical Cases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Sanctuary</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">Pet Products</a></li>
+            <li><a href="adoption.html" class="footer-link">Adoption Center</a></li>
+            <li><a href="emergency.html" class="footer-link">Emergency Hub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency</h4>
+          <p style="font-size: 0.88rem; opacity: 0.85; margin-bottom: 1rem;">24/7 Helpline: +1 (800) 555-8380</p>
+          <a href="emergency.html" class="btn btn-dusty btn-sm">Emergency Hub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 FurEver Care. All rights reserved.</div>
+        <a href="contact.html" class="footer-link">Contact Center</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/utilities.js"></script>
+  <script>
+    const VETS_DATA = [
+  {
+    "id": "vet-01",
+    "name": "Dr. Sarah Mitchell, DVM, DACVIM",
+    "specialization": "Cardiology & Internal Medicine",
+    "experience": "14 Years Experience",
+    "credentials": "Cornell University College of Veterinary Medicine",
+    "clinic": "FurEver Care Veterinary Center",
+    "location": "742 Heritage Boulevard, Suite 400",
+    "contact": "+1 (800) 555-8381",
+    "email": "dr.mitchell@furevercare.com",
+    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
+    "bio": "Dr. Mitchell is a board-certified specialist in small animal internal medicine with an emphasis on gentle echocardiography, chronic disease management, and longevity nutrition.",
+    "availability": "Mon, Wed, Fri (9:00 AM - 4:30 PM)",
+    "slots": [
+      {
+        "time": "09:30 AM",
+        "status": "Available"
+      },
+      {
+        "time": "11:00 AM",
+        "status": "Booked"
+      },
+      {
+        "time": "01:30 PM",
+        "status": "Available"
+      },
+      {
+        "time": "03:00 PM",
+        "status": "Next Available"
+      }
+    ],
+    "medicalCases": [
+      {
+        "pet": "Bella (Greyhound)",
+        "condition": "Mitral Valve Stage B1 Evaluation",
+        "date": "August 12, 2026",
+        "treatment": "Baseline 2D echocardiography, CoQ10 & Hawthorn dietary protocol, bi-annual Doppler monitoring.",
+        "status": "Stable / Monitored"
+      },
+      {
+        "pet": "Jasper (Ragdoll)",
+        "condition": "Renal Function Optimization",
+        "date": "July 28, 2026",
+        "treatment": "Micro-dosed subcutaneous electrolyte hydration, low-phosphorus gourmet diet formulation.",
+        "status": "In Remission"
+      }
+    ],
+    "cases": [
+      "Mitral Valve Stage B1 Evaluation",
+      "Renal Function Optimization"
+    ]
+  },
+  {
+    "id": "vet-02",
+    "name": "Dr. Ryan Carter, DVM, DACVS",
+    "specialization": "Orthopedic & Soft Tissue Surgery",
+    "experience": "16 Years Experience",
+    "credentials": "University of California, Davis School of Veterinary Medicine",
+    "clinic": "FurEver Care Surgical Center",
+    "location": "810 Symphony Terrace, Medical Wing",
+    "contact": "+1 (800) 555-8382",
+    "email": "dr.carter@furevercare.com",
+    "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80",
+    "bio": "Specializing in minimally invasive arthroscopy, cruciate ligament reconstruction, and holistic post-operative rehabilitation for canine and feline athletes.",
+    "availability": "Tue, Thu, Sat (8:30 AM - 3:00 PM)",
+    "slots": [
+      {
+        "time": "08:45 AM",
+        "status": "Booked"
+      },
+      {
+        "time": "10:30 AM",
+        "status": "Available"
+      },
+      {
+        "time": "01:15 PM",
+        "status": "Next Available"
+      },
+      {
+        "time": "02:30 PM",
+        "status": "Available"
+      }
+    ],
+    "medicalCases": [
+      {
+        "pet": "Charlie (Retriever)",
+        "condition": "Right TPLO Cruciate Reconstruction",
+        "date": "June 14, 2026",
+        "treatment": "Titanium plate osteotomy with underwater treadmill physical therapy. Full weight-bearing restored.",
+        "status": "Fully Recovered"
+      }
+    ],
+    "cases": [
+      "Right TPLO Cruciate Reconstruction"
+    ]
+  },
+  {
+    "id": "vet-03",
+    "name": "Dr. Maya Patel, DVM, CVA",
+    "specialization": "Holistic Dermatology & Acupuncture",
+    "experience": "11 Years Experience",
+    "credentials": "University of Florida College of Veterinary Medicine / Chi University",
+    "clinic": "FurEver Care Wellness Center",
+    "location": "512 Rosewood Lane, Floor 2",
+    "contact": "+1 (800) 555-8383",
+    "email": "dr.patel@furevercare.com",
+    "image": "https://amelieprivate.com/wp-content/uploads/2024/09/dr-zhouran-chen-2.jpg",
+    "bio": "Dr. Patel combines advanced western veterinary dermatology with certified veterinary acupuncture and customized botanical tinctures for chronic atopic dermatitis and anxiety.",
+    "availability": "Mon, Tue, Thu, Fri (10:00 AM - 5:30 PM)",
+    "slots": [
+      {
+        "time": "10:15 AM",
+        "status": "Available"
+      },
+      {
+        "time": "11:45 AM",
+        "status": "Available"
+      },
+      {
+        "time": "02:00 PM",
+        "status": "Booked"
+      },
+      {
+        "time": "04:15 PM",
+        "status": "Next Available"
+      }
+    ],
+    "medicalCases": [
+      {
+        "pet": "Mochi (French Bulldog)",
+        "condition": "Environmental Atopic Dermatitis",
+        "date": "August 02, 2026",
+        "treatment": "Microbiome skin lipid barrier restoration, weekly acupuncture, botanical chamomile rinse therapy.",
+        "status": "Resolved / Maintenance"
+      }
+    ],
+    "cases": [
+      "Environmental Atopic Dermatitis"
+    ]
+  },
+  {
+    "id": "vet-04",
+    "name": "Dr. Daniel Brooks, DVM, DAVDC",
+    "specialization": "Advanced Veterinary Dentistry & Maxillofacial Care",
+    "experience": "13 Years Experience",
+    "credentials": "University of Pennsylvania School of Veterinary Medicine",
+    "clinic": "FurEver Care Dental Center",
+    "location": "742 Heritage Boulevard, Suite 402",
+    "contact": "+1 (800) 555-8384",
+    "email": "dr.brooks@furevercare.com",
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
+    "bio": "Dedicated to pain-free periodontal disease intervention, full-mouth digital radiography, endodontics, and preventative oral health regimes.",
+    "availability": "Wed, Thu, Fri (9:00 AM - 4:00 PM)",
+    "slots": [
+      {
+        "time": "09:15 AM",
+        "status": "Available"
+      },
+      {
+        "time": "11:30 AM",
+        "status": "Booked"
+      },
+      {
+        "time": "01:45 PM",
+        "status": "Available"
+      },
+      {
+        "time": "03:15 PM",
+        "status": "Booked"
+      }
+    ],
+    "medicalCases": [
+      {
+        "pet": "Winston (Persian Cat)",
+        "condition": "Feline Odontoclastic Resorptive Lesion (FORL)",
+        "date": "July 19, 2026",
+        "treatment": "Subgingival digital radiography, precision crown amputation and surgical flap restoration.",
+        "status": "Healed / Comfort Restored"
+      }
+    ],
+    "cases": [
+      "Feline Odontoclastic Resorptive Lesion (FORL)"
+    ]
+  }
+];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const vetId = urlParams.get('id') || 'vet-01';
+
+      const vet = VETS_DATA.find(v => v.id === vetId) || VETS_DATA[0];
+      const container = document.getElementById('vet-profile-container');
+
+      if (container && vet) {
+        const slotsHtml = vet.slots.map(s => {
+          const statusClass = s.status.toLowerCase().replace(/\s+/g, '-');
+          return `<span class="slot-pill ${statusClass}" onclick="showToast('Selected slot ${s.time} with ${vet.name} (${s.status} - UI Demo)')">${s.time} • ${s.status}</span>`;
+        }).join(' ');
+
+        const casesHtml = (vet.cases || []).map(c => 
+          `<li style="padding: 0.4rem 0; border-bottom: 1px solid var(--burgundy-tint-20); font-size: 0.92rem;">✦ ${c}</li>`
+        ).join('');
+
+        container.innerHTML = `
+          <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start;">
+            <div>
+              <div class="hero-image-frame" style="border-radius: var(--radius-md);">
+                <img src="${vet.image}" alt="${vet.name}" style="height: 480px; width:100%; object-fit:contain; object-position:center;" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1000&q=85';">
+              </div>
+              <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 1.5rem;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Location</h4>
+                <div style="font-size: 0.9rem; font-weight: 600;">${vet.clinic}</div>
+                <div style="font-size: 0.85rem; opacity: 0.85; margin: 0.25rem 0 0.75rem;">${vet.location}</div>
+                <div style="font-size: 0.85rem;"><strong>Direct:</strong> ${vet.contact}</div>
+                <div style="font-size: 0.85rem;"><strong>Consultation Desk:</strong> ${vet.email}</div>
+              </div>
+            </div>
+
+            <div>
+              <span class="card-badge card-badge-dusty" style="position: static; display: inline-block; margin-bottom: 0.75rem;">${vet.experience}</span>
+              <span class="label-editorial" style="color: var(--burgundy-light); display: block; margin-bottom: 0.35rem;">${vet.specialization}</span>
+              <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 0.75rem; line-height: 1.1;">${vet.name}</h1>
+              <div style="font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--burgundy-light); margin-bottom: 1.5rem;">
+                ${vet.credentials}
+              </div>
+
+              <p style="font-size: 1.05rem; line-height: 1.65; margin-bottom: 2rem;">
+                ${vet.bio}
+              </p>
+
+              <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.75rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Clinical Case Expertise</h3>
+                <ul style="list-style: none;">
+                  ${casesHtml}
+                </ul>
+              </div>
+
+              <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.75rem; margin-bottom: 2.5rem;">
+                <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--burgundy); margin-bottom: 0.5rem;">Today's Available Telehealth & Clinical Slots (Display Only)</div>
+                <div class="slot-badge-grid">
+                  ${slotsHtml}
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="appointments.html?vet=${encodeURIComponent(vet.name)}" class="btn btn-burgundy btn-lg" style="flex: 1;">Schedule Consultation</a>
+                <a href="medical-history.html" class="btn btn-outline-burgundy btn-lg">View Case Timeline</a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site-enhancements.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guardian Reviews & Feedback Atelier | FurEver Care</title>
+  <meta name="description" content="Share your experience with FurEver Care or read authentic reviews from fellow pet guardians and sanctuary patrons.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media-fixes.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="utility-bar" aria-label="Live Sanctuary Telemetry">
+    <div class="container">
+      <div class="utility-group">
+        <div class="utility-item">
+          <span class="utility-dot"></span>
+          <span>LOCAL TIME: <strong id="live-clock">10:42 AM</strong></span>
+          <span style="opacity: 0.5; margin: 0 0.3rem;">|</span>
+          <span id="live-date">Mon, Aug 24</span>
+        </div>
+        <div class="utility-item" id="user-location">
+          <span class="utility-dot"></span>
+          <span>LOCATION: Detecting Regional Hub...</span>
+        </div>
+      </div>
+      <div class="utility-group">
+        <div class="utility-item">
+          <span>ATELIER VISITORS: <strong id="visitor-count">1,432</strong></span>
+        </div>
+        <div class="utility-user-greeting">
+          Welcome to FurEver Care
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Burgundy Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+<span class="brand-name">FurEver Care</span>
+          <span class="brand-tagline">They Deserve Forever Love</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="pet-care.html" class="nav-link">Pet Care</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="veterinarian.html" class="nav-link">Veterinarians</a></li>
+          <li><a href="adoption.html" class="nav-link">Adoption</a></li>
+          <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="pet-owner.html" class="btn btn-dusty btn-sm">Start Your Pet Journey</a>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="feedback.html" class="mobile-nav-link active">Feedback & Reviews</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="pet-care.html" class="mobile-nav-link">Pet Care Hub</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Pet Products</a></li>
+      <li><a href="veterinarian.html" class="mobile-nav-link">Veterinary Center</a></li>
+      <li><a href="adoption.html" class="mobile-nav-link">Adoption Center</a></li>
+      <li><a href="emergency.html" class="mobile-nav-link">Emergency Hub</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Header Hero -->
+    <section class="section section-hero">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;" class="reveal-on-scroll">
+          <span class="label-editorial" style="color: var(--burgundy-light); margin-bottom: 0.75rem;">Guardian Perspectives</span>
+          <h1 style="margin-bottom: 1rem;">Feedback & Reviews</h1>
+          <p class="text-lead">
+            Your reflections shape our botanical recipes, clinical services, and sanctuary matching protocols. Share your companion's experience with our council.
+          </p>
+        </div>
+
+        <!-- Feedback Form Container -->
+        <div style="max-width: 780px; margin: 3.5rem auto 0; background: var(--dusty-pink-light); border: 2px solid var(--burgundy); border-radius: var(--radius-lg); padding: 3.5rem; box-shadow: var(--shadow-editorial);" class="reveal-on-scroll">
+          
+          <div id="feedback-form-wrapper">
+            <div style="margin-bottom: 2rem; border-bottom: 1px solid var(--burgundy-tint-20); padding-bottom: 1rem;">
+              <span class="label-editorial" style="color: var(--burgundy-light);">Review Center</span>
+              <h2 style="font-size: 1.85rem; margin-top: 0.25rem;">Submit Your Experience</h2>
+            </div>
+
+            <form id="feedback-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="form-group">
+                  <label for="fb-name" class="form-label">Guardian Name *</label>
+                  <input type="text" id="fb-name" class="form-control" placeholder="e.g. Sarah Mitchell" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="fb-email" class="form-label">Email Address *</label>
+                  <input type="email" id="fb-email" class="form-control" placeholder="e.g. eleanor@example.com" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="form-group">
+                  <label for="fb-experience-type" class="form-label">Experience Category</label>
+                  <select id="fb-experience-type" class="form-control">
+                    <option value="Pet Products">Pet Products & Food</option>
+                    <option value="Veterinary Center">Veterinary Specialist Consultation</option>
+                    <option value="Sanctuary Adoption">Sanctuary Adoption Journey</option>
+                    <option value="Companion Journal">Pet Owner Journal Tool</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="fb-rating" class="form-label">Overall Rating</label>
+                  <select id="fb-rating" class="form-control">
+                    <option value="5">★★★★★ Exceptional (5/5)</option>
+                    <option value="4">★★★★☆ Very Good (4/5)</option>
+                    <option value="3">★★★☆☆ Satisfactory (3/5)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 2rem;">
+                <label for="fb-comments" class="form-label">Your Review & Observations *</label>
+                <textarea id="fb-comments" class="form-control" rows="4" placeholder="Tell us how FurEver Care impacted your companion..." required style="resize: vertical;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-burgundy btn-lg" style="width: 100%;">Transmit Feedback &rarr;</button>
+            </form>
+          </div>
+
+          <!-- Elegant Client-Side Success State (Requirement 24) -->
+          <div id="feedback-success-state" style="display: none; text-align: center; padding: 2rem 0;">
+            <div style="background: var(--burgundy); color: var(--dusty-pink-light); width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.75rem;">
+              ✓
+            </div>
+            <span class="label-editorial" style="color: var(--burgundy-light);">Submission Confirmed</span>
+            <h2 style="font-size: 2rem; margin: 0.35rem 0 1rem;">Thank You for Your Reverence</h2>
+            <p style="font-size: 1rem; max-width: 520px; margin: 0 auto 2rem; opacity: 0.85;">
+              Your reflection has been received by our editorial council. (Client-side interactive state — no backend transmission).
+            </p>
+            <button class="btn btn-outline-burgundy" onclick="resetFeedbackForm()">Submit Another Reflection</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Published Guardian Testimonials -->
+    <section class="section section-bordered-top" style="background: var(--dusty-pink);">
+      <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 3.5rem;" class="reveal-on-scroll">
+          <span class="label-editorial" style="color: var(--burgundy-light);">Echoes of Devotion</span>
+          <h2 style="font-size: 2.2rem; margin-top: 0.35rem;">Published Guardian Reviews</h2>
+        </div>
+
+        <div class="grid-3">
+          
+          <article class="card-editorial reveal-on-scroll">
+            <div style="color: var(--burgundy); font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <blockquote style="font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; margin-bottom: 1.25rem; line-height: 1.4;">
+              “The artisanal salmon and duck feast reversed my greyhound’s coat dullness within 3 weeks. The editorial aesthetics make ordering a joy.”
+            </blockquote>
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy-light); margin-top: auto;">
+              Rosie Parker's Guardian • Upper East Haven
+            </div>
+          </article>
+
+          <article class="card-editorial reveal-on-scroll">
+            <div style="color: var(--burgundy); font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <blockquote style="font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; margin-bottom: 1.25rem; line-height: 1.4;">
+              “Dr. Sarah Mitchell provided the most gentle, thorough cardiology consultation I have ever experienced. FurEver Care sets a new gold standard.”
+            </blockquote>
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy-light); margin-top: auto;">
+              Arthur Pendelton • Veterinary Center Patient
+            </div>
+          </article>
+
+          <article class="card-editorial reveal-on-scroll">
+            <div style="color: var(--burgundy); font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <blockquote style="font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; margin-bottom: 1.25rem; line-height: 1.4;">
+              “Adopting our bonded pair through their ethical sanctuary was seamless, respectful, and joyful. They truly live by their tagline.”
+            </blockquote>
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy-light); margin-top: auto;">
+              Claire & Julian Thorne • Sanctuary Adopters
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-name">FurEver Care</div>
+          <div class="footer-tagline">“They Deserve Forever Love”</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="feedback.html" class="footer-link">Guardian Reviews</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Concierge</a></li>
+            <li><a href="about.html" class="footer-link">About Brand</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Care Disciplines</h4>
+          <ul class="footer-links">
+            <li><a href="pet-owner.html" class="footer-link">Pet Owner Journal</a></li>
+            <li><a href="feeding-guide.html" class="footer-link">Feeding Guide</a></li>
+            <li><a href="veterinarian.html" class="footer-link">Veterinary Center</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency</h4>
+          <p style="font-size: 0.88rem; opacity: 0.85; margin-bottom: 1rem;">24/7 Helpline: +1 (800) 555-8380</p>
+          <a href="emergency.html" class="btn btn-dusty btn-sm">Emergency Hub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 FurEver Care. All rights reserved.</div>
+        <a href="contact.html" class="footer-link">Contact Center</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/utilities.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = typeof getUserProfile === 'function' ? getUserProfile() : null;
+      if (user && user.name) {
+        const nameInput = document.getElementById('fb-name');
+        if (nameInput) nameInput.value = user.name;
+      }
+
+      const form = document.getElementById('feedback-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          document.getElementById('feedback-form-wrapper').style.display = 'none';
+          document.getElementById('feedback-success-state').style.display = 'block';
+          if (typeof showToast === 'function') {
+            showToast('Feedback received! Thank you for sharing your experience.');
+          }
+        });
+      }
+    });
+
+    function resetFeedbackForm() {
+      document.getElementById('feedback-form').reset();
+      document.getElementById('feedback-form-wrapper').style.display = 'block';
+      document.getElementById('feedback-success-state').style.display = 'none';
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site-enhancements.js"></script>
+</body>
+</html>

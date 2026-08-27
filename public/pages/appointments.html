@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation Schedule & Booking Simulator | FurEver Care</title>
+  <meta name="description" content="Schedule a clinical or telehealth consultation with FurEver Care veterinary specialists and surgeons.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media-fixes.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="utility-bar" aria-label="Live Sanctuary Telemetry">
+    <div class="container">
+      <div class="utility-group">
+        <div class="utility-item">
+          <span class="utility-dot"></span>
+          <span>LOCAL TIME: <strong id="live-clock">10:42 AM</strong></span>
+          <span style="opacity: 0.5; margin: 0 0.3rem;">|</span>
+          <span id="live-date">Mon, Aug 24</span>
+        </div>
+        <div class="utility-item" id="user-location">
+          <span class="utility-dot"></span>
+          <span>LOCATION: Detecting Regional Hub...</span>
+        </div>
+      </div>
+      <div class="utility-group">
+        <div class="utility-item">
+          <span>ATELIER VISITORS: <strong id="visitor-count">1,432</strong></span>
+        </div>
+        <div class="utility-user-greeting">
+          Welcome to FurEver Care
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Burgundy Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+<span class="brand-name">FurEver Care</span>
+          <span class="brand-tagline">They Deserve Forever Love</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="pet-care.html" class="nav-link">Pet Care</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="veterinarian.html" class="nav-link active">Veterinarians</a></li>
+          <li><a href="adoption.html" class="nav-link">Adoption</a></li>
+          <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="pet-owner.html" class="btn btn-dusty btn-sm">Start Your Pet Journey</a>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="veterinarian.html" class="mobile-nav-link active">Veterinary Center</a></li>
+      <li><a href="appointments.html" class="mobile-nav-link">Consultation Booking</a></li>
+      <li><a href="medical-history.html" class="mobile-nav-link">Medical Case Studies</a></li>
+      <li><a href="pet-care.html" class="mobile-nav-link">Pet Care Hub</a></li>
+      <li><a href="emergency.html" class="mobile-nav-link">Emergency Hub</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Header Hero -->
+    <section class="section section-hero">
+      <div class="container">
+        <div style="max-width: 780px; margin: 0 auto; text-align: center;" class="reveal-on-scroll">
+          <span class="label-editorial" style="color: var(--burgundy-light); margin-bottom: 0.75rem;">Concierge Appointment Desk</span>
+          <h1 style="margin-bottom: 1rem;">Schedule Specialist Consultation</h1>
+          <p class="text-lead">
+            Select your preferred veterinary physician, consultation format, and available time slot. (Demonstration UI — Instant client confirmation).
+          </p>
+        </div>
+
+        <!-- Appointment Form Card -->
+        <div style="max-width: 840px; margin: 3.5rem auto 0; background: var(--dusty-pink-light); border: 2px solid var(--burgundy); border-radius: var(--radius-lg); padding: 3.5rem; box-shadow: var(--shadow-editorial);" class="reveal-on-scroll">
+          
+          <form id="appointment-booking-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; margin-bottom: 1.75rem;">
+              <div class="form-group">
+                <label for="app-vet" class="form-label">Specialist Physician *</label>
+                <select id="app-vet" class="form-control" required>
+                  <option value="Dr. Sarah Mitchell">Dr. Sarah Mitchell (Cardiology & Internal)</option>
+                  <option value="Dr. Ryan Carter">Dr. Ryan Carter (Orthopedic & Surgery)</option>
+                  <option value="Dr. Maya Patel">Dr. Maya Patel (Holistic Dermatology)</option>
+                  <option value="Dr. Daniel Brooks">Dr. Daniel Brooks (Veterinary Dentistry)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="app-type" class="form-label">Consultation Medium *</label>
+                <select id="app-type" class="form-control">
+                  <option value="In-Person Sanctuary Pavilion">In-Person Sanctuary Pavilion Visit</option>
+                  <option value="Telehealth HD Video Suite">Telehealth HD Video Suite</option>
+                  <option value="Second-Opinion Record Review">Second-Opinion Case Review</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="app-pet-name" class="form-label">Pet Companion Name *</label>
+                <input type="text" id="app-pet-name" class="form-control" placeholder="e.g. Gaston de Rose" required>
+              </div>
+
+              <div class="form-group">
+                <label for="app-guardian-name" class="form-label">Guardian First & Last Name *</label>
+                <input type="text" id="app-guardian-name" class="form-control" placeholder="e.g. Arthur Pendelton" required>
+              </div>
+
+              <div class="form-group">
+                <label for="app-date" class="form-label">Preferred Date *</label>
+                <input type="date" id="app-date" class="form-control" required value="2026-08-28">
+              </div>
+
+              <div class="form-group">
+                <label for="app-time" class="form-label">Available Time Slot *</label>
+                <select id="app-time" class="form-control" required>
+                  <option value="09:30 AM (Available)">09:30 AM (Available)</option>
+                  <option value="11:45 AM (Available)">11:45 AM (Available)</option>
+                  <option value="01:30 PM (Available)">01:30 PM (Available)</option>
+                  <option value="04:15 PM (Next Available)">04:15 PM (Next Available)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 2rem;">
+              <label for="app-reason" class="form-label">Primary Symptoms / Reason for Consultation</label>
+              <textarea id="app-reason" class="form-control" rows="3" placeholder="Describe symptoms, dietary history, or current medication..." style="resize: vertical;"></textarea>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--burgundy-tint-20);">
+              <span style="font-size: 0.82rem; opacity: 0.8;">Zero cancellation fees within 24 hours.</span>
+              <button type="submit" class="btn btn-burgundy btn-lg">Confirm Consultation Reservation &rarr;</button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-name">FurEver Care</div>
+          <div class="footer-tagline">“They Deserve Forever Love”</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Veterinary</h4>
+          <ul class="footer-links">
+            <li><a href="veterinarian.html" class="footer-link">Specialists</a></li>
+            <li><a href="appointments.html" class="footer-link">Book Appointment</a></li>
+            <li><a href="medical-history.html" class="footer-link">Case Studies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Sanctuary</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">Pet Products</a></li>
+            <li><a href="adoption.html" class="footer-link">Adoption Center</a></li>
+            <li><a href="emergency.html" class="footer-link">Emergency Hub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency</h4>
+          <p style="font-size: 0.88rem; opacity: 0.85; margin-bottom: 1rem;">24/7 Helpline: +1 (800) 555-8380</p>
+          <a href="emergency.html" class="btn btn-dusty btn-sm">Emergency Hub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 FurEver Care. All rights reserved.</div>
+        <a href="contact.html" class="footer-link">Contact Center</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/utilities.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const vetParam = urlParams.get('vet');
+      const vetSelect = document.getElementById('app-vet');
+      if (vetParam && vetSelect) {
+        for (let i = 0; i < vetSelect.options.length; i++) {
+          if (vetSelect.options[i].value.toLowerCase().includes(vetParam.toLowerCase()) || vetParam.toLowerCase().includes(vetSelect.options[i].value.toLowerCase())) {
+            vetSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      const user = typeof getUserProfile === 'function' ? getUserProfile() : null;
+      if (user && user.name) {
+        const guardianInput = document.getElementById('app-guardian-name');
+        if (guardianInput) guardianInput.value = user.name;
+      }
+
+      const form = document.getElementById('appointment-booking-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const vet = document.getElementById('app-vet')?.value;
+          const time = document.getElementById('app-time')?.value;
+          const pet = document.getElementById('app-pet-name')?.value || 'Companion';
+          
+          if (typeof showToast === 'function') {
+            showToast(`Consultation confirmed for ${pet} with ${vet} at ${time} (UI Demo).`);
+          }
+        });
+      }
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site-enhancements.js"></script>
+</body>
+</html>

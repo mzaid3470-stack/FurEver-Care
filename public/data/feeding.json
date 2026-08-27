@@ -1,0 +1,106 @@
+{
+  "lifeStages": [
+    {
+      "id": "puppy",
+      "name": "Puppy (2 - 12 Months)",
+      "species": "Canine",
+      "summary": "Rapid developmental growth phase requiring high biological protein, bioavailable calcium-phosphorus ratio, and DHA omega-3s for brain and vision maturation.",
+      "frequency": "3 to 4 meals per day",
+      "caloricDensity": "380 - 440 kcal / cup",
+      "hydrationRequirement": "60 - 100 ml per kg of body weight daily",
+      "nutritionalBreakdown": {
+        "protein": "28% - 32%",
+        "fat": "18% - 22%",
+        "fiber": "3% - 5%",
+        "moisture": "10% - 75%"
+      },
+      "portionGuide": [
+        { "weight": "2 - 5 kg", "dailyCups": "0.75 - 1.25 cups", "dailyGrams": "90 - 150g" },
+        { "weight": "5 - 10 kg", "dailyCups": "1.5 - 2.25 cups", "dailyGrams": "180 - 270g" },
+        { "weight": "10 - 20 kg", "dailyCups": "2.5 - 3.75 cups", "dailyGrams": "300 - 450g" },
+        { "weight": "20+ kg", "dailyCups": "4.0 - 5.5+ cups", "dailyGrams": "480 - 660g+" }
+      ],
+      "proTips": [
+        "Soak dry kibble in warm bone broth or botanical rosewater tea during teething weeks.",
+        "Maintain scheduled mealtimes and remove untouched food after 20 minutes to reinforce healthy digestive rhythm.",
+        "Never feed cooked bones, allium bulbs, or artificial sweeteners (xylitol/birch sugar)."
+      ]
+    },
+    {
+      "id": "adult-dog",
+      "name": "Adult Dog (1 - 7 Years)",
+      "species": "Canine",
+      "summary": "Maintenance of lean muscle mass, joint cartilage elasticity, and sustained cellular energy with balanced whole-food proteins and botanical fiber.",
+      "frequency": "2 structured meals per day",
+      "caloricDensity": "340 - 390 kcal / cup",
+      "hydrationRequirement": "50 - 60 ml per kg body weight daily",
+      "nutritionalBreakdown": {
+        "protein": "24% - 28%",
+        "fat": "14% - 18%",
+        "fiber": "4% - 6%",
+        "moisture": "10% - 70%"
+      },
+      "portionGuide": [
+        { "weight": "3 - 7 kg", "dailyCups": "0.5 - 1.0 cup", "dailyGrams": "70 - 130g" },
+        { "weight": "7 - 15 kg", "dailyCups": "1.25 - 2.0 cups", "dailyGrams": "150 - 240g" },
+        { "weight": "15 - 30 kg", "dailyCups": "2.25 - 3.5 cups", "dailyGrams": "270 - 420g" },
+        { "weight": "30+ kg", "dailyCups": "3.75 - 5.0+ cups", "dailyGrams": "450 - 600g+" }
+      ],
+      "proTips": [
+        "Rotate novel single-source proteins quarterly (Venison, Duck, Wild Salmon) to prevent dietary sensitivities.",
+        "Incorporate steamed pumpkin puree or fermented kefir for optimal prebiotic gut motility.",
+        "Adjust caloric intake downward by 10% during sedentary winter months."
+      ]
+    },
+    {
+      "id": "kitten",
+      "name": "Kitten (2 - 12 Months)",
+      "species": "Feline",
+      "summary": "Obligate carnivores in accelerated growth requiring dense animal-derived taurine, arginine, arachidonic acid, and high moisture to safeguard lifelong urinary tract health.",
+      "frequency": "4 to 5 small meals daily (or free-choice premium wet food)",
+      "caloricDensity": "420 - 480 kcal / cup or can",
+      "hydrationRequirement": "70 - 80 ml per kg body weight daily (primarily via moisture-rich food)",
+      "nutritionalBreakdown": {
+        "protein": "34% - 40%",
+        "fat": "20% - 24%",
+        "fiber": "2% - 3%",
+        "moisture": "75% - 82%"
+      },
+      "portionGuide": [
+        { "weight": "0.5 - 1.2 kg", "dailyCups": "1.0 - 1.5 small cans (85g each)", "dailyGrams": "85 - 130g" },
+        { "weight": "1.2 - 2.5 kg", "dailyCups": "2.0 - 2.5 small cans", "dailyGrams": "170 - 210g" },
+        { "weight": "2.5 - 4.0 kg", "dailyCups": "2.5 - 3.0 small cans", "dailyGrams": "210 - 260g" }
+      ],
+      "proTips": [
+        "Prioritize moisture-rich pâté over dry extruded kibble to prevent chronic subclinical dehydration.",
+        "Introduce ceramic circulating water fountains early to engage natural flowing-water hunting instincts.",
+        "Ensure essential amino acid Taurine is always guaranteed on dietary labels."
+      ]
+    },
+    {
+      "id": "adult-cat",
+      "name": "Adult Cat (1 - 10 Years)",
+      "species": "Feline",
+      "summary": "Strict carnivorous metabolic profile requiring pure animal proteins, controlled magnesium and phosphorus ratios, and hydration support for kidney preservation.",
+      "frequency": "2 to 3 measured meals per day",
+      "caloricDensity": "320 - 370 kcal / cup or 140 - 180 kcal / can",
+      "hydrationRequirement": "50 - 60 ml per kg body weight daily",
+      "nutritionalBreakdown": {
+        "protein": "32% - 38%",
+        "fat": "15% - 20%",
+        "fiber": "2% - 4%",
+        "moisture": "70% - 80%"
+      },
+      "portionGuide": [
+        { "weight": "2.5 - 3.5 kg", "dailyCups": "1.5 - 2.0 cans (85g)", "dailyGrams": "130 - 170g" },
+        { "weight": "3.5 - 5.0 kg", "dailyCups": "2.0 - 2.5 cans (85g)", "dailyGrams": "170 - 215g" },
+        { "weight": "5.0 - 7.0 kg", "dailyCups": "2.5 - 3.25 cans (85g)", "dailyGrams": "215 - 280g" }
+      ],
+      "proTips": [
+        "Elevate food bowls by 10-15cm to align feline esophagus posture and curb post-meal regurgitation.",
+        "Keep the water bowl in a distinct room separated from food, honoring instinctive feline hygiene habits.",
+        "Avoid high carbohydrate fillers (wheat, corn, soy) to maintain ideal lean body condition."
+      ]
+    }
+  ]
+}

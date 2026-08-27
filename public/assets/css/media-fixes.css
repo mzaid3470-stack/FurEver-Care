@@ -1,0 +1,382 @@
+/* Image integrity fixes — scoped only to media elements. Existing layout/colors remain unchanged. */
+.card-media img, .hero-image-frame img {
+  display:block;
+  width:100%;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:var(--dusty-pink-light);
+}
+#vets-grid .card-media img, #pets-grid .card-media img {
+  height:100% !important;
+}
+
+/* ================================================================
+   FINAL RESPONSIVE TARGETS
+   Tested targets: 1440px desktop, 768px tablet, 375px mobile.
+   These rules only harden sizing/flow; the existing palette and layout
+   language remain unchanged.
+   ================================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+img, svg, video, iframe { max-width: 100%; }
+
+/* 1440px desktop target */
+@media (min-width: 1200px) {
+  .container { width: min(100% - 3rem, 1320px); margin-inline: auto; }
+  .container-narrow { width: min(100% - 3rem, 1040px); margin-inline: auto; }
+  .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-editorial, .editorial-callout, .journal-header { min-width: 0; }
+}
+
+/* 768px tablet target */
+@media (min-width: 376px) and (max-width: 768px) {
+  .container, .container-narrow { width: min(100% - 2rem, 720px); margin-inline: auto; }
+  .grid-4, .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-2 { grid-template-columns: 1fr; }
+  .card-editorial { min-width: 0; }
+  .card-media { min-width: 0; overflow: hidden; }
+  .card-media img { width: 100%; max-width: 100%; }
+  .hero-grid, .editorial-page-grid, .editorial-callout { grid-template-columns: 1fr; }
+  .journey-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-top-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nav-actions { min-width: 0; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+}
+
+/* 375px mobile target */
+@media (max-width: 375px) {
+  body { min-width: 0; overflow-x: hidden; }
+  .container, .container-narrow { width: calc(100% - 1.5rem); max-width: none; margin-inline: auto; padding-inline: 0; }
+  .grid-4, .grid-3, .grid-2,
+  .hero-grid, .editorial-page-grid, .editorial-callout,
+  .journey-grid, .footer-top-grid { grid-template-columns: 1fr !important; }
+  .card-editorial { min-width: 0; width: 100%; }
+  .card-media { width: 100%; overflow: hidden; }
+  .card-media img, .hero-image-frame img { width: 100%; max-width: 100%; height: auto; }
+  .hero-image-frame img { max-height: 280px; object-fit: contain; }
+  .journal-stat-strip { grid-template-columns: 1fr; }
+  .personalize-form-grid { grid-template-columns: 1fr; }
+  .footer-top-grid { gap: 1.5rem; }
+  .section { padding: 2.75rem 0; }
+  .section-heading-centered { padding-inline: .25rem; }
+  .editorial-callout { padding: 1.5rem 1rem; }
+  .editorial-page-hero { padding: 3rem 0 2rem; }
+  .furever-page-back-wrap { padding-inline: .75rem; }
+  .furever-back-to-top { right: 12px; bottom: 12px; width: 42px; height: 42px; }
+  .btn, .btn-lg { max-width: 100%; }
+  .filter-bar, .filter-pills { min-width: 0; max-width: 100%; }
+  .filter-pills { overflow-x: auto; }
+  pre, code { max-width: 100%; overflow-x: auto; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+}
+
+
+/* FurEver Care brand mark: compact paw icon paired with the existing wordmark. */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.brand-paw-logo {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border-radius: 7px;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(59, 6, 20, 0.16);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.brand-logo:hover .brand-paw-logo {
+  transform: translateY(-1px) rotate(-3deg) scale(1.04);
+  box-shadow: 0 5px 14px rgba(59, 6, 20, 0.22);
+}
+@media (max-width: 520px) {
+  .brand-paw-logo { width: 20px; height: 20px; flex-basis: 20px; }
+}
+
+
+/* Care in Motion video showcase */
+.care-video-section {
+  background: var(--dusty-pink-light);
+  border-top: 1px solid rgba(59, 6, 20, 0.12);
+}
+.care-video-heading {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+.care-video-heading h2 { margin: .4rem 0 .75rem; }
+.care-video-heading p { max-width: 650px; margin: 0 auto; opacity: .82; }
+.care-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+.care-video-card {
+  overflow: hidden;
+  border: 1px solid rgba(59, 6, 20, .18);
+  border-radius: 16px;
+  background: rgba(255,255,255,.28);
+  box-shadow: 0 12px 28px rgba(59, 6, 20, .08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.care-video-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 36px rgba(59, 6, 20, .16);
+}
+.care-video-placeholder {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--burgundy);
+}
+.care-video-placeholder img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .55s ease;
+}
+.care-video-card:hover .care-video-placeholder img { transform: scale(1.045); }
+.care-video-play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 58px; height: 58px; border-radius: 50%;
+  display: grid; place-items: center; padding-left: 3px;
+  background: rgba(255, 240, 242, .94); color: var(--burgundy);
+  box-shadow: 0 8px 22px rgba(0,0,0,.18);
+  font-size: 1.05rem;
+}
+.care-video-copy { padding: 1.15rem 1.2rem 1.35rem; }
+.care-video-copy h3 { margin: .2rem 0 .5rem; }
+.care-video-copy p { margin: 0; font-size: .9rem; opacity: .82; }
+.care-video-note {
+  margin: 1.4rem auto 0; max-width: 900px; text-align: center;
+  padding: .9rem 1.1rem; border: 1px dashed rgba(59,6,20,.25);
+  border-radius: 12px; font-size: .82rem; opacity: .82;
+}
+@media (max-width: 900px) {
+  .care-video-grid { grid-template-columns: 1fr; max-width: 680px; margin-inline: auto; }
+}
+
+
+/* Final hero image fit: preserve the existing arch frame and fill it cleanly. */
+.hero-image-frame img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block;
+}
+.hero-image-frame {
+  background: var(--dusty-pink-light);
+}
+
+
+/* Final Care in Motion background video — theme-preserving, responsive. */
+.care-video-background {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  background: var(--burgundy-deep);
+  color: var(--dusty-pink-light);
+}
+.care-video-background .care-video-media,
+.care-video-background .care-video-overlay {
+  position: absolute;
+  inset: 0;
+}
+.care-video-background .care-video-media {
+  z-index: -3;
+}
+.care-video-background .care-video-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  filter: saturate(.82) contrast(.94);
+}
+.care-video-background .care-video-overlay {
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(59,6,20,.92) 0%, rgba(59,6,20,.74) 45%, rgba(59,6,20,.42) 100%),
+    linear-gradient(0deg, rgba(59,6,20,.38), rgba(59,6,20,.18));
+}
+.care-video-background .care-video-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.care-video-background .care-video-heading {
+  max-width: 780px;
+  margin: 0 auto 2.4rem;
+  text-align: center;
+}
+.care-video-background .care-video-heading h2,
+.care-video-background .care-video-heading p {
+  color: var(--dusty-pink-light);
+}
+.care-video-background .care-video-heading p {
+  opacity: .94;
+}
+.care-video-background .label-editorial {
+  color: var(--dusty-pink);
+}
+.care-video-feature-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.care-video-feature {
+  padding: 1.25rem 1.35rem;
+  border: 1px solid rgba(232,197,200,.38);
+  border-radius: var(--radius-md);
+  background: rgba(59,6,20,.38);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 14px 32px rgba(35,0,10,.18);
+  transition: transform .35s cubic-bezier(.16,1,.3,1), background-color .35s ease, border-color .35s ease;
+}
+.care-video-feature:hover {
+  transform: translateY(-6px);
+  background: rgba(59,6,20,.54);
+  border-color: rgba(232,197,200,.7);
+}
+.care-video-feature .card-number {
+  color: var(--dusty-pink);
+}
+.care-video-feature h3 {
+  color: var(--dusty-pink-light);
+  margin: .35rem 0 .45rem;
+}
+.care-video-feature p {
+  color: var(--dusty-pink-light);
+  opacity: .88;
+  margin: 0;
+  font-size: .9rem;
+}
+@media (max-width: 768px) {
+  .care-video-background { min-height: 0; }
+  .care-video-feature-row { grid-template-columns: 1fr; max-width: 620px; }
+  .care-video-background .care-video-heading { margin-bottom: 1.5rem; }
+}
+@media (max-width: 375px) {
+  .care-video-background .care-video-heading h2 { font-size: 2rem; }
+  .care-video-feature { padding: 1rem; }
+}
+
+/* FINAL NAVBAR + BRAND REFINEMENT */
+.site-header .navbar {
+  padding: .78rem 0;
+  gap: 1.15rem;
+}
+.site-header .brand-logo {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  min-width: 205px;
+  padding-left: 42px;
+  text-decoration: none;
+}
+.site-header .brand-logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  transform: translateY(-50%);
+  display: block;
+  border-radius: 8px;
+  background: url("../favicon.svg") center / contain no-repeat;
+  box-shadow: 0 3px 10px rgba(0,0,0,.12);
+}
+.site-header .brand-logo:hover::before {
+  transform: translateY(-50%) rotate(-4deg) scale(1.06);
+}
+.site-header .brand-name,
+.site-header .brand-tagline {
+  grid-column: auto !important;
+}
+.site-header .brand-name { font-size: 1.55rem; }
+.site-header .brand-tagline { font-size: .56rem; letter-spacing: .22em; }
+.site-header .nav-menu { gap: 1.2rem; }
+.site-header .nav-link { font-size: .82rem; }
+.site-header .nav-actions .btn { white-space: nowrap; }
+
+/* Lighter burgundy tint over the supplied video, keeping the same palette. */
+.care-video-background .care-video-overlay {
+  background:
+    linear-gradient(90deg, rgba(59,6,20,.72) 0%, rgba(59,6,20,.52) 48%, rgba(59,6,20,.24) 100%),
+    linear-gradient(0deg, rgba(59,6,20,.22), rgba(59,6,20,.10));
+}
+.care-video-background .care-video-media video {
+  filter: saturate(.88) contrast(.96) brightness(1.06);
+}
+
+@media (max-width: 900px) {
+  .site-header .brand-logo { min-width: 180px; padding-left: 38px; }
+  .site-header .brand-name { font-size: 1.35rem; }
+  .site-header .nav-menu { gap: .8rem; }
+  .site-header .nav-link { font-size: .76rem; }
+}
+@media (max-width: 700px) {
+  .site-header .navbar { padding: .65rem 0; }
+  .site-header .brand-logo { min-width: 0; padding-left: 34px; }
+  .site-header .brand-logo::before { width: 27px; height: 27px; }
+  .site-header .brand-name { font-size: 1.2rem; }
+  .site-header .brand-tagline { font-size: .48rem; }
+}
+
+
+/* Full-width desktop canvas: preserve the original theme while allowing the site content to use the browser width. */
+@media (min-width: 769px) {
+  .container, .container-narrow {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: clamp(1.5rem, 3vw, 4rem);
+  }
+  main { width: 100%; }
+}
+
+/* Page-level back control for detail pages. */
+.furever-page-back-wrap {
+  width: 100%;
+  padding: 1rem clamp(1rem, 3vw, 4rem) 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.furever-page-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+/* Real local grooming video, replacing the empty placeholder. */
+.grooming-video-card {
+  background: var(--dusty-pink);
+  border: 2px solid var(--burgundy);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-burgundy);
+}
+.grooming-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  background: var(--burgundy-deep);
+}
+.grooming-video-copy { padding: 1.25rem 1.5rem 1.5rem; text-align: center; }
+.grooming-video-copy h4 { margin-bottom: .4rem; }
+.grooming-video-copy p { font-size: .82rem; opacity: .85; margin: 0; }
+
+/* Keep the dusty-pink canvas visible across the whole React page. */
+html, body, #root, #react-site-shell, main { background-color: var(--dusty-pink); }

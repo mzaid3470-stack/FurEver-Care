@@ -1,0 +1,250 @@
+[
+  {
+    "id": "vet-01",
+    "name": "Dr. Sarah Mitchell, DVM, DACVIM",
+    "specialization": "Cardiology & Internal Medicine",
+    "experience": "14 Years Experience",
+    "credentials": "Cornell University College of Veterinary Medicine",
+    "clinic": "FurEver Care Veterinary Center",
+    "location": "742 Heritage Boulevard, Suite 400",
+    "contact": "+1 (800) 555-8381",
+    "email": "dr.mitchell@furevercare.com",
+    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&h=1100&q=85&crop=faces",
+    "bio": "Dr. Mitchell is a board-certified specialist in small animal internal medicine with an emphasis on gentle echocardiography, chronic disease management, and longevity nutrition.",
+    "availability": "Mon, Wed, Fri (9:00 AM - 4:30 PM)",
+    "slots": [
+      {
+        "time": "09:30 AM",
+        "status": "Available"
+      },
+      {
+        "time": "11:00 AM",
+        "status": "Booked"
+      },
+      {
+        "time": "01:30 PM",
+        "status": "Available"
+      },
+      {
+        "time": "03:00 PM",
+        "status": "Next Available"
+      }
+    ],
+    "medicalCases": [
+      {
+        "pet": "Bella (Greyhound)",
+        "condition": "Mitral Valve Stage B1 Evaluation",
+        "date": "August 12, 2026",
+        "treatment": "Baseline 2D echocardiography, nutritional support, and scheduled Doppler monitoring.",
+        "status": "Stable / Monitored"
+      },
+      {
+        "pet": "Jasper (Ragdoll)",
+        "condition": "Renal Function Optimization",
+        "date": "July 28, 2026",
+        "treatment": "Individualized hydration planning and a controlled low-phosphorus nutrition program.",
+        "status": "In Remission"
+      }
+    ],
+    "cases": [
+      "Mitral Valve Stage B1 Evaluation",
+      "Renal Function Optimization"
+    ],
+    "profileTitle": "Small Animal Cardiology & Internal Medicine",
+    "bioLong": "Dr. Sarah Mitchell focuses on long-term cardiac and internal-medicine care for dogs and cats. Her clinical work centers on careful diagnostic imaging, chronic-condition planning, and practical nutrition conversations that help families understand what to monitor between visits. She favors measured, low-stress examinations and clear follow-up plans built around each companion’s age, lifestyle, and clinical history.",
+    "approach": "Her consultations combine a detailed history, focused examination, diagnostic interpretation, and a written monitoring plan. When ongoing care is needed, she works with primary-care veterinarians so recommendations remain coordinated and easy for families to follow.",
+    "focusAreas": [
+      "Cardiac screening and echocardiography",
+      "Chronic internal-medicine management",
+      "Senior-pet wellness planning",
+      "Nutrition and lifestyle support"
+    ],
+    "educationDetail": "DVM — Cornell University College of Veterinary Medicine; advanced small-animal internal-medicine training with a focus on cardiology."
+  },
+  {
+    "id": "vet-02",
+    "name": "Dr. Ryan Carter, DVM, DACVS",
+    "specialization": "Orthopedic & Soft Tissue Surgery",
+    "experience": "16 Years Experience",
+    "credentials": "University of California, Davis School of Veterinary Medicine",
+    "clinic": "FurEver Care Surgical Center",
+    "location": "810 Symphony Terrace, Medical Wing",
+    "contact": "+1 (800) 555-8382",
+    "email": "dr.carter@furevercare.com",
+    "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&h=1100&q=85&crop=faces",
+    "bio": "Dr. Carter specializes in minimally invasive arthroscopy, cruciate ligament reconstruction, and structured post-operative rehabilitation for canine and feline patients.",
+    "availability": "Tue, Thu, Sat (8:30 AM - 3:00 PM)",
+    "slots": [
+      {
+        "time": "08:45 AM",
+        "status": "Booked"
+      },
+      {
+        "time": "10:30 AM",
+        "status": "Available"
+      },
+      {
+        "time": "01:15 PM",
+        "status": "Next Available"
+      },
+      {
+        "time": "02:30 PM",
+        "status": "Available"
+      }
+    ],
+    "medicalCases": [
+      {
+        "pet": "Charlie (Retriever)",
+        "condition": "Right TPLO Cruciate Reconstruction",
+        "date": "June 14, 2026",
+        "treatment": "TPLO surgical stabilization followed by staged mobility exercises and supervised rehabilitation.",
+        "status": "Fully Recovered"
+      },
+      {
+        "pet": "Luna (Border Collie)",
+        "condition": "Elbow Dysplasia Assessment",
+        "date": "May 21, 2026",
+        "treatment": "Orthopedic imaging, activity modification, and a progressive strength-and-conditioning plan.",
+        "status": "Managed"
+      }
+    ],
+    "cases": [
+      "Right TPLO Cruciate Reconstruction",
+      "Elbow Dysplasia Assessment"
+    ],
+    "profileTitle": "Orthopedic & Soft Tissue Surgery",
+    "bioLong": "Dr. Ryan Carter specializes in orthopedic and soft-tissue procedures for active dogs and cats, with particular attention to cruciate injuries, arthroscopy, and structured recovery. He combines surgical planning with rehabilitation guidance so families have a clear path from the first consultation through return-to-activity milestones.",
+    "approach": "Dr. Carter begins with mobility history, orthopedic examination, and appropriate imaging before discussing treatment options. When surgery is indicated, he explains the expected recovery stages, home-care requirements, and rehabilitation goals in plain language.",
+    "focusAreas": [
+      "Cruciate ligament reconstruction",
+      "Minimally invasive arthroscopy",
+      "Soft-tissue surgery",
+      "Post-operative rehabilitation planning"
+    ],
+    "educationDetail": "DVM — University of California, Davis School of Veterinary Medicine; advanced surgical training in small-animal orthopedics and soft-tissue procedures."
+  },
+  {
+    "id": "vet-03",
+    "name": "Dr. Maya Patel, DVM, CVA",
+    "specialization": "Holistic Dermatology & Acupuncture",
+    "experience": "11 Years Experience",
+    "credentials": "University of Florida College of Veterinary Medicine / Chi University",
+    "clinic": "FurEver Care Wellness Center",
+    "location": "512 Rosewood Lane, Floor 2",
+    "contact": "+1 (800) 555-8383",
+    "email": "dr.patel@furevercare.com",
+    "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&h=1100&q=85&crop=faces",
+    "bio": "Dr. Patel combines conventional veterinary dermatology with certified veterinary acupuncture and practical supportive care for recurring skin and allergy concerns.",
+    "availability": "Mon, Tue, Thu, Fri (10:00 AM - 5:30 PM)",
+    "slots": [
+      {
+        "time": "10:15 AM",
+        "status": "Available"
+      },
+      {
+        "time": "11:45 AM",
+        "status": "Available"
+      },
+      {
+        "time": "02:00 PM",
+        "status": "Booked"
+      },
+      {
+        "time": "04:15 PM",
+        "status": "Next Available"
+      }
+    ],
+    "medicalCases": [
+      {
+        "pet": "Mochi (French Bulldog)",
+        "condition": "Environmental Atopic Dermatitis",
+        "date": "August 02, 2026",
+        "treatment": "Allergy-pattern review, skin-barrier care, scheduled acupuncture, and a simplified home-care routine.",
+        "status": "Resolved / Maintenance"
+      },
+      {
+        "pet": "Cleo (Domestic Shorthair)",
+        "condition": "Recurrent Feline Pruritus",
+        "date": "July 07, 2026",
+        "treatment": "Dermatologic workup, environmental review, and a monitored long-term skin-care plan.",
+        "status": "Improving"
+      }
+    ],
+    "cases": [
+      "Environmental Atopic Dermatitis",
+      "Recurrent Feline Pruritus"
+    ],
+    "profileTitle": "Holistic Dermatology & Veterinary Acupuncture",
+    "bioLong": "Dr. Maya Patel works with dogs and cats experiencing recurring skin discomfort, environmental sensitivities, and chronic dermatologic concerns. Her approach combines conventional veterinary dermatology with veterinary acupuncture and carefully selected supportive wellness measures, while keeping the diagnostic workup and treatment plan individualized to the patient.",
+    "approach": "Her consultations emphasize identifying patterns in diet, environment, grooming, seasonality, and previous treatment response. Each plan is designed to be practical at home, with progress reviewed over time rather than relying on a one-size-fits-all routine.",
+    "focusAreas": [
+      "Chronic and recurrent skin conditions",
+      "Environmental allergy management",
+      "Veterinary acupuncture",
+      "Coordinated skin-care and wellness plans"
+    ],
+    "educationDetail": "DVM — University of Florida College of Veterinary Medicine; additional veterinary acupuncture training through Chi University."
+  },
+  {
+    "id": "vet-04",
+    "name": "Dr. Daniel Brooks, DVM, DAVDC",
+    "specialization": "Advanced Veterinary Dentistry & Maxillofacial Care",
+    "experience": "13 Years Experience",
+    "credentials": "University of Pennsylvania School of Veterinary Medicine",
+    "clinic": "FurEver Care Dental Center",
+    "location": "742 Heritage Boulevard, Suite 402",
+    "contact": "+1 (800) 555-8384",
+    "email": "dr.brooks@furevercare.com",
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&h=1100&q=85&crop=faces",
+    "bio": "Dr. Brooks focuses on advanced veterinary dentistry, periodontal disease management, digital dental radiography, and complex oral surgery for dogs and cats.",
+    "availability": "Wed, Thu, Fri (9:00 AM - 4:00 PM)",
+    "slots": [
+      {
+        "time": "09:15 AM",
+        "status": "Available"
+      },
+      {
+        "time": "11:30 AM",
+        "status": "Booked"
+      },
+      {
+        "time": "01:45 PM",
+        "status": "Available"
+      },
+      {
+        "time": "03:15 PM",
+        "status": "Booked"
+      }
+    ],
+    "medicalCases": [
+      {
+        "pet": "Winston (Persian Cat)",
+        "condition": "Feline Odontoclastic Resorptive Lesion",
+        "date": "July 19, 2026",
+        "treatment": "Full-mouth digital radiography, affected-tooth treatment, and staged oral-care follow-up.",
+        "status": "Healed / Comfort Restored"
+      },
+      {
+        "pet": "Cooper (Labrador)",
+        "condition": "Advanced Periodontal Disease",
+        "date": "June 30, 2026",
+        "treatment": "Comprehensive dental cleaning, periodontal therapy, and a home oral-hygiene program.",
+        "status": "Stable / Maintained"
+      }
+    ],
+    "cases": [
+      "Feline Odontoclastic Resorptive Lesion",
+      "Advanced Periodontal Disease"
+    ],
+    "profileTitle": "Advanced Veterinary Dentistry & Maxillofacial Care",
+    "bioLong": "Dr. Daniel Brooks provides advanced dental and maxillofacial care for companion animals, with an emphasis on thorough oral assessment, digital dental imaging, periodontal treatment, and complex surgical planning. His goal is to make oral-health decisions easier for families to understand while prioritizing comfort, function, and long-term prevention.",
+    "approach": "Every dental consultation starts with a complete oral-health history and examination. When additional diagnostics or anesthesia are appropriate, Dr. Brooks explains the sequence of care, expected recovery, and home-prevention steps before treatment begins.",
+    "focusAreas": [
+      "Comprehensive oral examinations",
+      "Digital dental radiography",
+      "Periodontal disease management",
+      "Oral and maxillofacial surgery"
+    ],
+    "educationDetail": "DVM — University of Pennsylvania School of Veterinary Medicine; advanced veterinary dentistry training with board-focused clinical experience."
+  }
+]

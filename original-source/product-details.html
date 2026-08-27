@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Spotlight & Atelier Specifications | FurEver Care</title>
+  <meta name="description" content="View detailed ingredients, craftsmanship origin, and veterinary safety certifications for our curated pet essentials.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media-fixes.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="utility-bar" aria-label="Live Sanctuary Telemetry">
+    <div class="container">
+      <div class="utility-group">
+        <div class="utility-item">
+          <span class="utility-dot"></span>
+          <span>LOCAL TIME: <strong id="live-clock">10:42 AM</strong></span>
+          <span style="opacity: 0.5; margin: 0 0.3rem;">|</span>
+          <span id="live-date">Mon, Aug 24</span>
+        </div>
+        <div class="utility-item" id="user-location">
+          <span class="utility-dot"></span>
+          <span>LOCATION: Detecting Regional Hub...</span>
+        </div>
+      </div>
+      <div class="utility-group">
+        <div class="utility-item">
+          <span>ATELIER VISITORS: <strong id="visitor-count">1,432</strong></span>
+        </div>
+        <div class="utility-user-greeting">
+          Welcome to FurEver Care
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Burgundy Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+<span class="brand-name">FurEver Care</span>
+          <span class="brand-tagline">They Deserve Forever Love</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="pet-care.html" class="nav-link">Pet Care</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="veterinarian.html" class="nav-link">Veterinarians</a></li>
+          <li><a href="adoption.html" class="nav-link">Adoption</a></li>
+          <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="pet-owner.html" class="btn btn-dusty btn-sm">Start Your Pet Journey</a>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="products.html" class="mobile-nav-link active">Pet Products</a></li>
+      <li><a href="pet-care.html" class="mobile-nav-link">Pet Care Hub</a></li>
+      <li><a href="veterinarian.html" class="mobile-nav-link">Veterinary Center</a></li>
+      <li><a href="adoption.html" class="mobile-nav-link">Adoption Center</a></li>
+      <li><a href="emergency.html" class="mobile-nav-link">Emergency Hub</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="section section-hero">
+      <div class="container">
+        
+        <div style="margin-bottom: 2rem;">
+          <a href="products.html" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--burgundy); display: inline-flex; align-items: center; gap: 0.4rem;">
+            &larr; Back to Care Collection
+          </a>
+        </div>
+
+        <div id="product-detail-container" class="reveal-on-scroll">
+          <!-- Dynamic product details injected via JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Related Atelier Recommendations -->
+    <section class="section section-bordered-top" style="background: var(--dusty-pink-light);">
+      <div class="container">
+        <div style="margin-bottom: 2.5rem;">
+          <span class="label-editorial" style="color: var(--burgundy-light);">Complementary Essentials</span>
+          <h2 style="font-size: 2rem; margin-top: 0.25rem;">You May Also Appreciate</h2>
+        </div>
+        <div id="related-products-grid" class="grid-3">
+          <!-- Related items injected via JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-name">FurEver Care</div>
+          <div class="footer-tagline">“They Deserve Forever Love”</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Marketplace</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">All Products</a></li>
+            <li><a href="feeding-guide.html" class="footer-link">Feeding Guide</a></li>
+            <li><a href="grooming.html" class="footer-link">Grooming</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Sanctuary</h4>
+          <ul class="footer-links">
+            <li><a href="veterinarian.html" class="footer-link">Veterinarians</a></li>
+            <li><a href="adoption.html" class="footer-link">Adoption</a></li>
+            <li><a href="emergency.html" class="footer-link">Emergency</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency</h4>
+          <p style="font-size: 0.88rem; opacity: 0.85; margin-bottom: 1rem;">24/7 Helpline: +1 (800) 555-8380</p>
+          <a href="emergency.html" class="btn btn-dusty btn-sm">Emergency Hub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 FurEver Care. All rights reserved.</div>
+        <a href="contact.html" class="footer-link">Contact Center</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/utilities.js"></script>
+  <script>
+    const PRODUCTS_DATA = [
+      {
+        id: "prod-01",
+        name: "Salmon & Duck Complete Pet Food",
+        category: "Dog/Cat Food",
+        subCategory: "Grain-Free Nutrition",
+        price: 48.00,
+        rating: 4.9,
+        reviews: 128,
+        badge: "Bestseller",
+        image: "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=800&q=80",
+        description: "Slow-cooked wild Alaskan salmon paired with heritage duck breast, infused with cranberries, pumpkin, and cold-pressed flaxseed oil for optimal coat luster and cellular vitality.",
+        weight: "2.5 kg / 5.5 lbs",
+        ingredients: ["Wild Alaskan Salmon", "Free-Range Duck", "Organic Pumpkin", "Cranberries", "Cold-Pressed Flaxseed Oil", "Kelp Extract", "Rosemary Preservation Extract"]
+      },
+      {
+        id: "prod-02",
+        name: "Orthopedic Memory Foam Pet Bed",
+        category: "Bedding & Apparel",
+        subCategory: "Luxury Comfort",
+        price: 145.00,
+        rating: 5.0,
+        reviews: 94,
+        badge: "Signature",
+        image: "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=800&q=80",
+        description: "Handcrafted orthopedic dual-layer memory foam encased in stain-resistant burgundy velvet with removable, machine-washable hypoallergenic upholstery.",
+        weight: "Medium / Large Sizes",
+        ingredients: ["High-Density Visco Elastic Foam", "Stain-Resistant Burgundy Velvet", "Waterproof Breathable Membrane", "Brass YKK Enclosed Zippers"]
+      },
+      {
+        id: "prod-03",
+        name: "Botanical Coat Conditioning Wash",
+        category: "Grooming Essentials",
+        subCategory: "Coat Care",
+        price: 34.00,
+        rating: 4.8,
+        reviews: 76,
+        badge: "Eco-Luxe",
+        image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80",
+        description: "pH-balanced botanical conditioning shampoo formulated with pure damask rosewater, silk amino acids, and soothing chamomile extract to restore natural sheen.",
+        weight: "500 ml / 16.9 fl oz",
+        ingredients: ["Damask Rose Hydrosol", "Hydrolyzed Silk Amino Acids", "Organic Aloe Barbadensis Leaf Juice", "Chamomile Extract", "Cold-Pressed Jojoba Oil"]
+      },
+      {
+        id: "prod-04",
+        name: "Probiotic & Joint Support Chews",
+        category: "Health Supplements",
+        subCategory: "Joint & Gut Wellness",
+        price: 52.00,
+        rating: 4.9,
+        reviews: 115,
+        badge: "Vet Formulated",
+        image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=80",
+        description: "Clinical-grade microencapsulated probiotics (10 Billion CFU) combined with marine collagen peptides and green-lipped mussel for joint lubrication and gut health.",
+        weight: "90 Chewable Morsels",
+        ingredients: ["Marine Collagen Peptides", "New Zealand Green-Lipped Mussel", "Lactobacillus acidophilus", "Glucosamine HCL", "Organic Turmeric Root Extract"]
+      }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id') || 'prod-01';
+
+      const product = PRODUCTS_DATA.find(p => p.id === productId) || PRODUCTS_DATA[0];
+      const container = document.getElementById('product-detail-container');
+
+      if (container && product) {
+        const ingredientsHtml = product.ingredients.map(ing => 
+          `<li style="padding: 0.35rem 0; border-bottom: 1px solid var(--burgundy-tint-20); font-size: 0.9rem;">✦ ${ing}</li>`
+        ).join('');
+
+        container.innerHTML = `
+          <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start;">
+            <div>
+              <div class="hero-image-frame" style="border-radius: var(--radius-lg);">
+                <img src="${product.image}" alt="${product.name}" style="height: 460px;">
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.25rem;">
+                <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); padding: 1rem; border-radius: var(--radius-sm); text-align: center;">
+                  <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Veterinary Verified</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.2rem;">100% Non-Toxic</div>
+                </div>
+                <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); padding: 1rem; border-radius: var(--radius-sm); text-align: center;">
+                  <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Origin</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.2rem;">Ethically Made</div>
+                </div>
+                <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); padding: 1rem; border-radius: var(--radius-sm); text-align: center;">
+                  <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Packaging</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.2rem;">100% Recyclable</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.75rem;">
+                <span class="card-badge card-badge-dusty">${product.badge}</span>
+                <span class="label-editorial" style="color: var(--burgundy-light);">${product.category} • ${product.subCategory}</span>
+              </div>
+              <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1.1; margin-bottom: 1rem;">${product.name}</h1>
+              <div style="display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <span class="card-price" style="font-size: 2.2rem;">$${product.price.toFixed(2)}</span>
+                <span style="font-size: 0.85rem; opacity: 0.8;">★ ${product.rating} / 5.0 (${product.reviews} Certified Pet Guardian Reviews)</span>
+              </div>
+
+              <p style="font-size: 1.05rem; line-height: 1.65; margin-bottom: 2rem;">${product.description}</p>
+
+              <div style="background: var(--dusty-pink-light); border: 1px solid var(--burgundy-tint-20); border-radius: var(--radius-md); padding: 1.75rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Composition & Ingredient Dossier</h3>
+                <ul style="list-style: none;">
+                  ${ingredientsHtml}
+                </ul>
+              </div>
+
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn btn-burgundy btn-lg" style="flex: 1;" onclick="showToast('Added &quot;${product.name}&quot; to Atelier Reservation (Demo).')">Add to Cart</button>
+                <a href="products.html" class="btn btn-outline-burgundy btn-lg">Browse More</a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Related Products
+      const relatedGrid = document.getElementById('related-products-grid');
+      if (relatedGrid) {
+        const related = PRODUCTS_DATA.filter(p => p.id !== productId).slice(0, 3);
+        relatedGrid.innerHTML = related.map(item => `
+          <article class="card-editorial reveal-on-scroll is-visible">
+            <span class="card-badge">${item.badge}</span>
+            <div class="card-media">
+              <img src="${item.image}" alt="${item.name}">
+            </div>
+            <span class="label-editorial" style="color: var(--burgundy-light); margin-bottom: 0.35rem;">${item.category}</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;"><a href="product-details.html?id=${item.id}">${item.name}</a></h3>
+            <div class="card-price" style="margin-bottom: 1rem;">$${item.price.toFixed(2)}</div>
+            <a href="product-details.html?id=${item.id}" class="btn btn-outline-burgundy btn-sm" style="margin-top: auto;">View Specifications</a>
+          </article>
+        `).join('');
+      }
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site-enhancements.js"></script>
+</body>
+</html>

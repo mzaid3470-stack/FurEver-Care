@@ -1,0 +1,299 @@
+[
+  {
+    "id": "prod-01",
+    "name": "Salmon & Duck Complete Pet Food",
+    "category": "Dog/Cat Food",
+    "subCategory": "Grain-Free Nutrition",
+    "price": 48.0,
+    "rating": 4.9,
+    "reviews": 128,
+    "badge": "Bestseller",
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=800&q=80",
+    "description": "Slow-cooked wild Alaskan salmon paired with heritage duck breast, infused with cranberries, pumpkin, and cold-pressed flaxseed oil for optimal coat luster and cellular vitality.",
+    "weight": "2.5 kg / 5.5 lbs",
+    "ingredients": [
+      "Wild Alaskan Salmon",
+      "Free-Range Duck",
+      "Organic Pumpkin",
+      "Cranberries",
+      "Flaxseed Oil",
+      "Kelp Extract"
+    ],
+    "overview": "A complete dry-food formula built around salmon and duck, with pumpkin and cranberries for a balanced everyday meal.",
+    "bestFor": "Adult dogs and cats needing a protein-forward everyday dry food.",
+    "serving": "Introduce gradually over 7 days. Follow the feeding guidance on the package and adjust portions for body size, age, activity, and veterinary recommendations.",
+    "specifications": [
+      "2.5 kg / 5.5 lbs bag",
+      "Dry food",
+      "Salmon and duck recipe",
+      "For adult dogs and cats"
+    ],
+    "care": "Store sealed in a cool, dry place. Keep fresh water available at all times.",
+    "notes": "This product page uses the recipe information in the FurEver Care catalog. Feeding amounts should be individualized by a veterinarian when a pet has a medical condition."
+  },
+  {
+    "id": "prod-02",
+    "name": "Orthopedic Memory Foam Pet Bed",
+    "category": "Bedding & Apparel",
+    "subCategory": "Luxury Comfort",
+    "price": 145.0,
+    "rating": 5.0,
+    "reviews": 94,
+    "badge": "Signature",
+    "image": "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=800&q=80",
+    "description": "Handcrafted orthopedic dual-layer memory foam encased in stain-resistant burgundy velvet with removable, machine-washable hypoallergenic upholstery.",
+    "weight": "Medium / Large Sizes",
+    "ingredients": [
+      "High-Density Visco Foam",
+      "Burgundy Velvet Cover",
+      "Waterproof Inner Membrane"
+    ],
+    "overview": "A supportive pet bed with a dual-layer foam core and removable velvet cover, designed for daily rest and easy cleaning.",
+    "bestFor": "Dogs and cats that prefer a supportive sleeping surface, including older or less-active pets.",
+    "serving": "Place the bed on a flat, dry indoor surface with enough room for your pet to stretch and turn comfortably.",
+    "specifications": [
+      "Medium / Large",
+      "Dual-layer memory foam",
+      "Removable cover",
+      "Machine-washable upholstery"
+    ],
+    "care": "Remove the cover before washing and follow the garment-care instructions. Spot-clean the inner components and allow them to dry completely.",
+    "notes": "Choose a size that allows your pet to lie fully extended without hanging over the edges."
+  },
+  {
+    "id": "prod-03",
+    "name": "Botanical Coat Conditioning Wash",
+    "category": "Grooming Essentials",
+    "subCategory": "Coat Care",
+    "price": 34.0,
+    "rating": 4.8,
+    "reviews": 76,
+    "badge": "Eco-Luxe",
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80",
+    "description": "pH-balanced botanical conditioning shampoo formulated with pure damask rosewater, silk amino acids, and soothing chamomile extract to restore natural sheen.",
+    "weight": "500 ml / 16.9 fl oz",
+    "ingredients": [
+      "Damask Rose Hydrosol",
+      "Hydrolyzed Silk",
+      "Aloe Barbadensis",
+      "Chamomile Extract",
+      "Jojoba Oil"
+    ],
+    "overview": "A botanical cleansing and conditioning wash combining rose hydrosol, aloe, chamomile, silk amino acids, and jojoba oil for routine coat care.",
+    "bestFor": "Dogs and cats that need a gentle bathing routine and a conditioned, soft-feeling coat.",
+    "serving": "Wet the coat thoroughly, work a small amount through the fur, avoid the eyes and inner ears, then rinse completely.",
+    "specifications": [
+      "500 ml / 16.9 fl oz",
+      "Liquid coat wash",
+      "Rose, aloe, chamomile, silk, and jojoba blend",
+      "For routine grooming"
+    ],
+    "care": "Keep container closed between uses and store at room temperature away from direct heat and sunlight.",
+    "notes": "For pets with persistent itching, redness, sores, or other skin concerns, seek veterinary advice rather than relying on a cosmetic wash."
+  },
+  {
+    "id": "prod-04",
+    "name": "Probiotic & Joint Support Chews",
+    "category": "Health Supplements",
+    "subCategory": "Joint & Gut Wellness",
+    "price": 52.0,
+    "rating": 4.9,
+    "reviews": 115,
+    "badge": "Vet Formulated",
+    "image": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=80",
+    "description": "Clinical-grade microencapsulated probiotics (10 Billion CFU) combined with marine collagen peptides and green-lipped mussel for joint lubrication and gut health.",
+    "weight": "90 Chewable Morsels",
+    "ingredients": [
+      "Marine Collagen Peptides",
+      "Green-Lipped Mussel",
+      "L. acidophilus",
+      "Glucosamine HCL",
+      "Turmeric Root"
+    ],
+    "overview": "Chewable support combining marine collagen, green-lipped mussel, probiotics, glucosamine, and turmeric in a convenient daily format.",
+    "bestFor": "Adult dogs whose guardians are looking for nutritional joint and digestive support.",
+    "serving": "Use according to the package directions and your pet's weight. Introduce gradually if your pet is not accustomed to supplements.",
+    "specifications": [
+      "90 chewable morsels",
+      "Joint and digestive support",
+      "Marine collagen and green-lipped mussel",
+      "Probiotic blend"
+    ],
+    "care": "Keep tightly closed in a cool, dry place. Do not exceed the labeled serving without veterinary guidance.",
+    "notes": "Supplements are not a substitute for diagnosis or treatment. Ask a veterinarian before use for pets taking medication or managing a health condition."
+  },
+  {
+    "id": "prod-05",
+    "name": "Full-Grain Leather Leash & Collar",
+    "category": "Bedding & Apparel",
+    "subCategory": "Atelier Walking Wear",
+    "price": 89.0,
+    "rating": 4.9,
+    "reviews": 62,
+    "badge": "Artisan Crafted",
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=800&q=80",
+    "description": "Vegetable-tanned full-grain Italian leather in deep burgundy with solid brushed brass hardware and reinforced saddle stitching for effortless strolls.",
+    "weight": "Adjustable (S, M, L)",
+    "ingredients": [
+      "Full-Grain Tuscan Leather",
+      "Solid Brass Hardware",
+      "Natural Wax Finish"
+    ],
+    "overview": "A coordinated walking set made from full-grain leather with brass hardware and reinforced stitching for everyday leash-and-collar use.",
+    "bestFor": "Dogs that need a durable collar and leash set for supervised walks.",
+    "serving": "Adjust the collar so two fingers can fit comfortably between the collar and your dog's neck. Attach the leash to a secure collar ring.",
+    "specifications": [
+      "Small / Medium / Large",
+      "Full-grain leather",
+      "Solid brass hardware",
+      "Adjustable collar"
+    ],
+    "care": "Wipe leather with a soft, slightly damp cloth and allow it to air-dry naturally. Keep leather away from prolonged water exposure.",
+    "notes": "Inspect stitching, hardware, collar fit, and leash attachment points before every walk. Replace any worn component."
+  },
+  {
+    "id": "prod-06",
+    "name": "Sisal & Wood Cat Activity Tower",
+    "category": "Toys",
+    "subCategory": "Enrichment & Play",
+    "price": 120.0,
+    "rating": 4.7,
+    "reviews": 48,
+    "badge": "Design Icon",
+    "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80",
+    "description": "Sculptural architectural cat enrichment tower crafted from sustainably harvested teakwood and natural unbleached sisal rope with a cushioned observation perch.",
+    "weight": "H: 110cm / 43.3 in",
+    "ingredients": [
+      "Solid Teakwood",
+      "Natural Sisal Fiber",
+      "Burgundy Linen Cushion"
+    ],
+    "overview": "A multi-level indoor cat tower combining a sturdy wooden structure, sisal surfaces, and an elevated cushioned perch for climbing and resting.",
+    "bestFor": "Indoor cats that enjoy climbing, scratching, observing, and changing resting positions.",
+    "serving": "Assemble on a level floor and position away from unstable furniture or narrow walkways. Introduce the tower with treats or familiar bedding if needed.",
+    "specifications": [
+      "110 cm / 43.3 in high",
+      "Solid teakwood",
+      "Natural sisal fiber",
+      "Cushioned observation perch"
+    ],
+    "care": "Vacuum loose fur and debris regularly. Wipe wooden surfaces with a lightly damp cloth and keep the tower dry.",
+    "notes": "Check fasteners and structural stability regularly, especially after moving or reassembling the tower."
+  },
+  {
+    "id": "prod-07",
+    "name": "Freeze-Dried Venison Training Treats",
+    "category": "Dog/Cat Food",
+    "subCategory": "Pure Raw Treats",
+    "price": 26.0,
+    "rating": 5.0,
+    "reviews": 142,
+    "badge": "Single Protein",
+    "image": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80",
+    "description": "100% pasture-raised New Zealand venison freeze-dried at peak nutrient density, tossed with antioxidant-rich hand-harvested lingonberries.",
+    "weight": "180 g / 6.3 oz",
+    "ingredients": [
+      "96% Grass-Fed Venison",
+      "4% Organic Lingonberries",
+      "No Additives"
+    ],
+    "overview": "Single-protein freeze-dried venison treats made for small rewards during training, with a short ingredient list centered on venison.",
+    "bestFor": "Training sessions where a small, high-value reward is useful for dogs or cats.",
+    "serving": "Break larger pieces into training-size portions and count treats as part of the day's overall food intake.",
+    "specifications": [
+      "180 g / 6.3 oz",
+      "Freeze-dried treats",
+      "Venison-based",
+      "Small training portions"
+    ],
+    "care": "Reseal after opening and store according to the package directions. Keep treats dry and use clean hands or utensils.",
+    "notes": "Introduce any new treat gradually and monitor your pet for digestive sensitivity."
+  },
+  {
+    "id": "prod-08",
+    "name": "Quiet Ceramic Pet Water Fountain",
+    "category": "Grooming Essentials",
+    "subCategory": "Hydration Systems",
+    "price": 68.0,
+    "rating": 4.8,
+    "reviews": 89,
+    "badge": "Eco-Luxe",
+    "image": "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=800&q=80",
+    "description": "Heavy glazed ceramic drinking fountain with quadruple coconut carbon filtration and ultra-silent submersible pump to encourage natural hydration habits.",
+    "weight": "2.2 Liters / 74 fl oz",
+    "ingredients": [
+      "Food-Grade Ceramic",
+      "Coconut Shell Carbon Filter",
+      "BPA-Free Pump"
+    ],
+    "overview": "A glazed ceramic drinking fountain with a 2.2-liter reservoir, carbon filtration, and a quiet submersible pump to keep water moving.",
+    "bestFor": "Dogs and cats that benefit from a circulating water source at home.",
+    "serving": "Fill with fresh water to the recommended level, position on a stable surface, and replace the filter on the manufacturer's schedule.",
+    "specifications": [
+      "2.2 L / 74 fl oz",
+      "Food-grade ceramic",
+      "Coconut-shell carbon filter",
+      "Submersible pump"
+    ],
+    "care": "Unplug before cleaning. Wash the basin regularly, clean the pump according to its care instructions, and replace the filter as needed.",
+    "notes": "Always keep a clean alternative water source available if the fountain is unplugged or being cleaned."
+  },
+  {
+    "id": "prod-09",
+    "name": "Natural Rubber Puzzle Ball",
+    "category": "Toys",
+    "subCategory": "Mental Stimulation",
+    "price": 22.0,
+    "rating": 4.9,
+    "reviews": 110,
+    "badge": "Interactive",
+    "image": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=800&q=80",
+    "description": "Ergonomically textured non-toxic natural rubber puzzle feeder designed to reward patience, slow down fast eaters, and provide stimulating mental exercise.",
+    "weight": "Standard / 8.5 cm dia",
+    "ingredients": [
+      "100% Pure Natural Tree Rubber",
+      "Food-Safe Plant Dyes"
+    ],
+    "overview": "A textured natural-rubber puzzle ball that can hold small food rewards, turning mealtime or training into a simple enrichment activity.",
+    "bestFor": "Dogs and cats that enjoy food-motivated puzzle play and supervised enrichment.",
+    "serving": "Use with appropriately sized dry treats or kibble. Start with an easy fill level, then increase difficulty as your pet learns the toy.",
+    "specifications": [
+      "8.5 cm diameter",
+      "Natural tree rubber",
+      "Food-safe plant dyes",
+      "Treat-dispensing puzzle"
+    ],
+    "care": "Wash after use with mild soap and water, rinse thoroughly, and allow the toy to dry completely.",
+    "notes": "Use only under supervision and remove the toy if it becomes damaged or small pieces begin to separate."
+  },
+  {
+    "id": "prod-10",
+    "name": "Herbal Calming Support Drops",
+    "category": "Health Supplements",
+    "subCategory": "Emotional Balance",
+    "price": 38.0,
+    "rating": 4.8,
+    "reviews": 57,
+    "badge": "Holistic",
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80",
+    "description": "Veterinarian-formulated liquid adaptogen elixir containing organic KSM-66 Ashwagandha, passionflower, and L-theanine for separation anxiety, grooming, and travel calm.",
+    "weight": "60 ml / 2.0 fl oz",
+    "ingredients": [
+      "Organic Ashwagandha",
+      "Passionflower Extract",
+      "L-Theanine",
+      "MCT Coconut Carrier Oil"
+    ],
+    "overview": "A liquid botanical support blend featuring ashwagandha, passionflower, and L-theanine in an MCT oil carrier for use as a supplemental wellness product.",
+    "bestFor": "Pet guardians considering a calming-support supplement and seeking professional guidance on suitability.",
+    "serving": "Use only according to the product label and veterinary guidance. Do not estimate a dose from another animal or product.",
+    "specifications": [
+      "60 ml / 2.0 fl oz",
+      "Liquid supplement",
+      "Ashwagandha, passionflower, and L-theanine",
+      "MCT coconut oil carrier"
+    ],
+    "care": "Store tightly closed as directed on the label and keep out of reach of children and pets when not in use.",
+    "notes": "Herbal supplements can interact with medications and may not be appropriate for every pet. Consult a veterinarian before use, especially for pets with ongoing medical care."
+  }
+]

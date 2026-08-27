@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Their Next Chapter | FurEver Care</title>
+  <meta name="description" content="FurEver Care is a modern editorial luxury pet-care brand offering personalized journals, feeding guides, artisanal products, vet specialists, ethical adoption, wellness, grooming, training, and emergency support.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media-fixes.css">
+</head>
+
+<body>
+
+  <!-- Top Utility Bar: Clock, Geolocation & Counter -->
+  <aside class="utility-bar" aria-label="Live Sanctuary Telemetry">
+    <div class="container">
+      <div class="utility-group">
+        <div class="utility-item">
+          <span class="utility-dot"></span>
+          <span>LOCAL TIME: <strong id="live-clock">10:42 AM</strong></span>
+          <span style="opacity: 0.5; margin: 0 0.3rem;">|</span>
+          <span id="live-date">Mon, Aug 24</span>
+        </div>
+
+        <div class="utility-item" id="user-location">
+          <span class="utility-dot"></span>
+          <span>LOCATION: Detecting Regional Hub...</span>
+        </div>
+      </div>
+
+      <div class="utility-group">
+        <div class="utility-item">
+          <span>ATELIER VISITORS: <strong id="visitor-count">1,432</strong></span>
+        </div>
+
+        <div class="utility-user-greeting">
+          Welcome to FurEver Care
+        </div>
+      </div>
+    </div>
+  </aside>
+
+
+  <!-- Sticky Burgundy Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+
+        <a href="index.html" class="brand-logo">
+<span class="brand-name">FurEver Care</span>
+          <span class="brand-tagline">They Deserve Forever Love</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="pet-care.html" class="nav-link">Pet Care</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="veterinarian.html" class="nav-link">Veterinarians</a></li>
+          <li><a href="adoption.html" class="nav-link">Adoption</a></li>
+          <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="pet-owner.html" class="btn btn-dusty btn-sm">
+            Start Your Pet Journey
+          </a>
+
+          <button class="mobile-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+
+  <div class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="pet-owner.html" class="mobile-nav-link">Pet Owner Portal</a></li>
+      <li><a href="pet-care.html" class="mobile-nav-link">Pet Care Hub</a></li>
+      <li><a href="feeding-guide.html" class="mobile-nav-link">Feeding Guide</a></li>
+      <li><a href="grooming.html" class="mobile-nav-link">Grooming Studio</a></li>
+      <li><a href="health-tips.html" class="mobile-nav-link">Health & Longevity</a></li>
+      <li><a href="training.html" class="mobile-nav-link">Mind & Training</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Pet Products</a></li>
+      <li><a href="veterinarian.html" class="mobile-nav-link">Veterinary Center</a></li>
+      <li><a href="adoption.html" class="mobile-nav-link">Adoption Center</a></li>
+      <li><a href="success-stories.html" class="mobile-nav-link">Success Stories</a></li>
+      <li><a href="emergency.html" class="mobile-nav-link">Emergency & Triage</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About FurEver Care</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact Center</a></li>
+      <li><a href="feedback.html" class="mobile-nav-link">Feedback & Reviews</a></li>
+      <li><a href="philosophy.html" class="mobile-nav-link">FurEver Philosophy</a></li>
+      <li><a href="daily-world.html" class="mobile-nav-link">A Day in Their World</a></li>
+      <li><a href="companion-journey.html" class="mobile-nav-link">Companion Journey</a></li>
+      <li><a href="next-chapter.html" class="mobile-nav-link">Their Next Chapter</a></li>
+    </ul>
+
+    <a href="pet-owner.html" class="btn btn-dusty" style="width: 100%;">
+      Create Pet Journal
+    </a>
+  </div>
+
+
+  <!-- Continuous Scrolling Editorial Ticker -->
+  <div class="ticker-banner" aria-hidden="true">
+    <div class="ticker-track">
+
+      <div class="ticker-item">
+        <span>FurEver Care</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>They Deserve Forever Love</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Integrative Pet Wellness</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Bespoke Grooming & Nutrition</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Sanctuary Adoption</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Board-Certified Veterinary Care</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Artisanal Pet Essentials</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <!-- Duplicate Set -->
+      <div class="ticker-item">
+        <span>FurEver Care</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>They Deserve Forever Love</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Integrative Pet Wellness</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Bespoke Grooming & Nutrition</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Sanctuary Adoption</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Board-Certified Veterinary Care</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+      <div class="ticker-item">
+        <span>Artisanal Pet Essentials</span>
+        <span class="ticker-star">✦</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <main>
+<section class="section editorial-page-hero">
+  <div class="container">
+    <div class="section-heading-centered reveal-on-scroll">
+      <span class="label-editorial" style="color:var(--burgundy-light);">Their Next Chapter</span>
+      <h1>Every Companion Has a Story Waiting to Unfold.</h1>
+      <p class="text-lead">Whether you are beginning a new pet journal, discovering a future companion, or simply looking for better everyday care, your next chapter begins here.</p>
+    </div>
+  </div>
+</section>
+<section class="section section-sm">
+  <div class="container">
+    <div class="editorial-callout reveal-on-scroll">
+      <div>
+        <span class="label-editorial" style="color:var(--dusty-pink-muted);">Their Next Chapter</span>
+        <h2>Start where your companion needs you most.</h2>
+        <p>There is no single right entry point. Choose the experience that fits your moment, then move naturally through the wider FurEver Care ecosystem.</p>
+      </div>
+      <div class="stacked-links">
+        <a href="adoption.html" class="btn btn-dusty btn-lg">Discover a Companion</a>
+        <a href="pet-owner.html" class="btn btn-outline-dusty btn-lg">Build Their Wellness Journey</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="grid-3">
+      <article class="card-editorial reveal-on-scroll"><span class="card-number">01</span><h3>Beginning Together</h3><p>Create a companion journal and establish a care rhythm from the start.</p><a href="pet-owner.html" class="btn btn-outline-burgundy btn-sm" style="margin-top:auto;">Start a Journal</a></article>
+      <article class="card-editorial card-editorial-burgundy reveal-on-scroll"><span class="card-number" style="color:var(--dusty-pink-muted);opacity:.5;">02</span><h3>Growing Well</h3><p>Use feeding, grooming, health, and training resources to support everyday wellbeing.</p><a href="pet-care.html" class="btn btn-dusty btn-sm" style="margin-top:auto;">Explore Pet Care</a></article>
+      <article class="card-editorial reveal-on-scroll"><span class="card-number">03</span><h3>When Support Matters</h3><p>Keep professional and emergency resources close when the situation calls for them.</p><a href="emergency.html" class="btn btn-outline-burgundy btn-sm" style="margin-top:auto;">Emergency Care</a></article>
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+  <!-- =========================================================
+       LUXURY EDITORIAL FOOTER
+  ========================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-top-grid">
+
+        <div class="footer-brand">
+
+          <div class="brand-name">
+            FurEver Care
+          </div>
+
+          <div class="footer-tagline">
+            “They Deserve Forever Love”
+          </div>
+
+          <p
+            style="
+              font-size: 0.88rem;
+              opacity: 0.8;
+              line-height: 1.6;
+              max-width: 320px;
+            ">
+            A luxury editorial sanctuary for pet guardians,
+            veterinary clinicians, and animal shelter patrons.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="footer-heading">
+            Pet Care & Wellness
+          </h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="pet-owner.html" class="footer-link">
+                Pet Owner Journal
+              </a>
+            </li>
+
+            <li>
+              <a href="pet-profile.html" class="footer-link">
+                Pet Profile Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="feeding-guide.html" class="footer-link">
+                Bespoke Feeding Guide
+              </a>
+            </li>
+
+            <li>
+              <a href="grooming.html" class="footer-link">
+                Grooming Studio
+              </a>
+            </li>
+
+            <li>
+              <a href="health-tips.html" class="footer-link">
+                Health & Prevention
+              </a>
+            </li>
+
+            <li>
+              <a href="training.html" class="footer-link">
+                Training & Behavior
+              </a>
+            </li>
+            <li><a href="philosophy.html" class="footer-link">FurEver Philosophy</a></li>
+            <li><a href="daily-world.html" class="footer-link">A Day in Their World</a></li>
+            <li><a href="companion-journey.html" class="footer-link">Companion Journey</a></li>
+            <li><a href="next-chapter.html" class="footer-link">Their Next Chapter</a></li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="footer-heading">
+            Sanctuary & Pavilion
+          </h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="products.html" class="footer-link">
+                Pet Products
+              </a>
+            </li>
+
+            <li>
+              <a href="veterinarian.html" class="footer-link">
+                Veterinary Center
+              </a>
+            </li>
+
+            <li>
+              <a href="appointments.html" class="footer-link">
+                Consultation Schedule
+              </a>
+            </li>
+
+            <li>
+              <a href="medical-history.html" class="footer-link">
+                Clinical Medical Cases
+              </a>
+            </li>
+
+            <li>
+              <a href="adoption.html" class="footer-link">
+                Adoptable Companions
+              </a>
+            </li>
+
+            <li>
+              <a href="success-stories.html" class="footer-link">
+                Success Stories
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="footer-heading">
+            Care Studio
+          </h4>
+
+          <p
+            style="
+              font-size: 0.88rem;
+              opacity: 0.85;
+              margin-bottom: 0.75rem;
+            ">
+            742 Heritage Boulevard, Suite 400<br>
+            Metropolitan Sanctuary District
+          </p>
+
+          <p
+            style="
+              font-size: 0.88rem;
+              opacity: 0.85;
+              margin-bottom: 1.25rem;
+            ">
+            Direct: +1 (800) 555-8380<br>
+            Concierge: concierge@furevercare.com
+          </p>
+
+          <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+
+            <a
+              href="emergency.html"
+              class="btn btn-dusty btn-sm">
+              24/7 Emergency
+            </a>
+
+            <a
+              href="feedback.html"
+              class="btn btn-outline-dusty btn-sm">
+              Client Reviews
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 FurEver Care. All rights reserved.
+          Built with pure HTML5, CSS3, Vanilla JS & JSON.
+        </div>
+
+        <div
+          style="
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+          ">
+
+          <a href="about.html" class="footer-link">
+            About Brand
+          </a>
+
+          <a href="contact.html" class="footer-link">
+            Contact Us
+          </a>
+
+          <a href="feedback.html" class="footer-link">
+            Feedback
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- Scripts -->
+  <script src="assets/js/utilities.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/site-enhancements.js"></script>
+</body>
+</html>

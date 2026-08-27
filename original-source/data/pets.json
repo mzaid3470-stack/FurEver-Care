@@ -1,0 +1,180 @@
+[
+  {
+    "id": "pet-01",
+    "name": "Bella Morgan",
+    "species": "Dogs",
+    "breed": "Italian Greyhound",
+    "age": "2 Years",
+    "gender": "Female (Spayed)",
+    "size": "Small (6 kg)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Gentle Soul",
+    "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80",
+    "summary": "An aristocratic yet affectionate companion who adores cashmere blankets, peaceful afternoon sunbaths, and quiet company.",
+    "personality": [
+      "Gentle & Polite",
+      "Cuddle Enthusiast",
+      "Leash Trained",
+      "Quiet & Serene",
+      "Harmonious with Cats"
+    ],
+    "health": "Fully vaccinated, microchipped, spayed, dental cleaning completed May 2026.",
+    "story": "Rescued during a private estate transition, Bella has flourished under gentle foster care. She enjoys rhythmic morning walks followed by hours of contented slumber in sunny corners. She seeks a peaceful domestic environment where gentle affection is cherished."
+  },
+  {
+    "id": "pet-02",
+    "name": "Charlie Brooks",
+    "species": "Dogs",
+    "breed": "Golden Retriever & Setter Mix",
+    "age": "3 Years",
+    "gender": "Male (Neutered)",
+    "size": "Large (28 kg)",
+    "location": "FurEver Care Pet Center",
+    "status": "Available",
+    "badge": "Active Explorer",
+    "image": "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=80",
+    "summary": "Joyful, devoted, and exceptionally intelligent. Charlie is eager to learn, loves hiking trails, and greets everyone with a wagging tail.",
+    "personality": [
+      "Enthusiastic",
+      "Family Friendly",
+      "Swimmer",
+      "Quick Learner",
+      "Devoted Companion"
+    ],
+    "health": "Vaccinated up to date, neutered, hip evaluation clear, heartworm negative.",
+    "story": "Charlie was surrendered when his prior family relocated overseas. He brings boundless loyalty and gentle playfulness into any warm household with space for outdoor adventures."
+  },
+  {
+    "id": "pet-03",
+    "name": "Oliver \"Ollie\" Carter",
+    "species": "Cats",
+    "breed": "British Shorthair (Lilac)",
+    "age": "1.5 Years",
+    "gender": "Male (Neutered)",
+    "size": "Medium (4.5 kg)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Quiet Aristocrat",
+    "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80",
+    "summary": "A plush velvet philosopher who observes life with quiet majesty, enjoys wand play, and curls up at the foot of the bed.",
+    "personality": [
+      "Independent",
+      "Playful Observer",
+      "Litter Perfect",
+      "Low Vocalization"
+    ],
+    "health": "Microchipped, neutered, FVRCP & FeLV negative, vaccinated.",
+    "story": "Ollie arrived as a timid rescue and has blossomed into a steady, dignified companion who appreciates gentle affection and elevated window perches."
+  },
+  {
+    "id": "pet-04",
+    "name": "Daisy & Lily",
+    "species": "Cats",
+    "breed": "Ragdoll & Chantilly Sisters",
+    "age": "1 Year",
+    "gender": "Female (Bonded Pair)",
+    "size": "Medium Pair (4 kg each)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Bonded Pair",
+    "image": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80",
+    "summary": "Two inseparable sisters with striking sapphire eyes and silk coats. They groom each other constantly and purr in harmonic unison.",
+    "personality": [
+      "Ultra Affectionate",
+      "Playful Duo",
+      "Lap Seekers",
+      "Gentle"
+    ],
+    "health": "Both spayed, fully vaccinated, microchipped, dewormed.",
+    "story": "Found together in a garden estate, Daisy and Lily are bonded for life and seek a serene home that will cherish double the purrs and affection."
+  },
+  {
+    "id": "pet-05",
+    "name": "Max Bennett",
+    "species": "Rabbits",
+    "breed": "Holland Lop",
+    "age": "10 Months",
+    "gender": "Male (Neutered)",
+    "size": "Small (1.8 kg)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Free-Roam Ready",
+    "image": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=800&q=80",
+    "summary": "A curious, velvety Holland Lop who performs delightful joy binkies and enjoys organic dandelion leaves and willow chew toys.",
+    "personality": [
+      "Litter Box Trained",
+      "Curious",
+      "Gentle",
+      "Prefers Quiet"
+    ],
+    "health": "Neutered, RHDV2 vaccinated, baseline dental exam pristine.",
+    "story": "Max is a calm, curious companion who enjoys supervised free-roam time, willow toys, and peaceful household routines."
+  },
+  {
+    "id": "pet-06",
+    "name": "Rosie Parker",
+    "species": "Dogs",
+    "breed": "Miniature Dachshund",
+    "age": "4 Years",
+    "gender": "Female (Spayed)",
+    "size": "Small (5 kg)",
+    "location": "FurEver Care Pet Center",
+    "status": "Available",
+    "badge": "Heart Warmer",
+    "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80",
+    "summary": "A spirited, warm-hearted little lady with a penchant for soft burrowing blankets and companionable strolls in the park.",
+    "personality": [
+      "Sweet Natured",
+      "Affectionate",
+      "Playful",
+      "People Oriented"
+    ],
+    "health": "Spayed, all core vaccines current, spine health certified by orthopedic vet.",
+    "story": "Rosie Parker is a warm, affectionate companion who thrives on gentle interaction and relaxed family routines."
+  },
+  {
+    "id": "pet-07",
+    "name": "Cooper James",
+    "species": "Rabbits",
+    "breed": "Lionhead Heritage",
+    "age": "1 Year",
+    "gender": "Male (Neutered)",
+    "size": "Small (1.6 kg)",
+    "location": "FurEver Care Adoption Center",
+    "status": "Available",
+    "badge": "Silken Mane",
+    "image": "https://images.unsplash.com/photo-1535241749838-299277b6305f?auto=format&fit=crop&w=800&q=80",
+    "summary": "Distinguished Lionhead rabbit with a cloud-like mane who loves gentle head strokes, fresh timothy hay, and stacking cups.",
+    "personality": [
+      "Curious",
+      "Gentle",
+      "Confident",
+      "Playful"
+    ],
+    "health": "Neutered, vaccinated, regular grooming care routine established.",
+    "story": "Cooper James is an easygoing companion with a curious nature and a fondness for enrichment games and quiet cuddles."
+  },
+  {
+    "id": "pet-08",
+    "name": "Luna Grace",
+    "species": "Cats",
+    "breed": "Russian Blue Mix",
+    "age": "2.5 Years",
+    "gender": "Female (Spayed)",
+    "size": "Medium (3.8 kg)",
+    "location": "FurEver Care Pet Center",
+    "status": "Available",
+    "badge": "Emerald Eyes",
+    "image": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=800&q=80",
+    "summary": "Silvery coat with captivating green eyes. Luna Grace is a calm soul who enjoys sunbeams, bird watching, and gentle chin scratches.",
+    "personality": [
+      "Calm",
+      "Observant",
+      "Independent",
+      "Sweet Natured"
+    ],
+    "health": "Microchipped, spayed, vaccinated, FeLV/FIV negative.",
+    "story": "Luna Grace is a calm soul who enjoys sunbeams, bird watching, and gentle chin scratches in a peaceful home."
+  }
+]
